@@ -8,6 +8,6 @@ on:
 
 jobs:
   release:
-    uses: joel-grant/github-actions/.github/workflows/release-please.yaml@setup
+    uses: joel-grant/github-actions/workflows/release-please.yaml@setup
     secrets:
       MY_RELEASE_PLEASE_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
