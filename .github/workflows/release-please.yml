@@ -1,13 +1,12 @@
-name: Release Please
-
+name: Release
 on:
   push:
-  #   branches: [ main ]
-  # pull_request:
-  #   branches: [ main ]
 
 jobs:
-  release-please:
+  release:
     uses: joel-grant/github-actions/.github/workflows/release-please.yaml@setup
+    with:
+      config-file: '.github/release-please-config.json'  # optional
+      manifest-file: '.github/.release-please-manifest.json'  # optional
     secrets:
-      MY_RELEASE_PLEASE_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
+      release-token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
