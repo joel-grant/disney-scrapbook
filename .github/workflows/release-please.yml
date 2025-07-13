@@ -11,7 +11,7 @@ jobs:
   release:
     uses: joel-grant/github-actions/.github/workflows/release-please.yaml@setup
     with:
-      config-file: '.github/release-please-config.json'  # optional
-      manifest-file: '.github/.release-please-manifest.json'  # optional
+      config-file: '.github/release-please-config.json'
+      manifest-file: '.github/.release-please-manifest.json'
     secrets:
       release-token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
