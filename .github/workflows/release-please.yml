@@ -1,0 +1,14 @@
+name: Relese Please
+
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  release:
+    uses: joel-grant/github-actions/.github/workflows/release-please.yaml@main
+    secrets:
+      MY_RELEASE_PLEASE_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
