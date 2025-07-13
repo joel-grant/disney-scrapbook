@@ -7,7 +7,7 @@ on:
   #   branches: [ main ]
 
 jobs:
-  release:
+  release-please:
     uses: joel-grant/github-actions/.github/workflows/release-please.yaml@setup
     secrets:
       MY_RELEASE_PLEASE_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
