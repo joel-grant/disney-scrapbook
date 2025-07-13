@@ -1,6 +1,11 @@
 name: Release
 on:
   push:
+    # branches: [ main ]
+
+permissions:
+  contents: write        # Required for creating releases
+  pull-requests: write   # Required for creating release PRs
 
 jobs:
   release:
