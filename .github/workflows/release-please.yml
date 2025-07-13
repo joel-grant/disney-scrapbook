@@ -1,6 +1,5 @@
 name: Relese Please
 
-
 on:
   push:
     branches: [ main ]
