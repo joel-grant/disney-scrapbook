@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.1...v0.6.2) (2025-07-14)
+
+
+### Bug Fixes
+
+* update grammar :) ([#38](https://github.com/joel-grant/disney-scrapbook/issues/38)) ([704ff61](https://github.com/joel-grant/disney-scrapbook/commit/704ff61e96ce8c25edd9432cd3d58b9ae8bcf3dc))
+
 ## [0.6.1](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.0...v0.6.1) (2025-07-14)
 
 
