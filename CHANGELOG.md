@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.3-alpha](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.2...v0.6.3-alpha) (2025-07-14)
+
+
+### Bug Fixes
+
+* resolve missing quotes ([#41](https://github.com/joel-grant/disney-scrapbook/issues/41)) ([a6bdf30](https://github.com/joel-grant/disney-scrapbook/commit/a6bdf30efe352fbb043b6bc79135f9f5f2b8897e))
+* **versioning:** update proper versioning ([#40](https://github.com/joel-grant/disney-scrapbook/issues/40)) ([db7d7ed](https://github.com/joel-grant/disney-scrapbook/commit/db7d7ed8e838c9e9779fffae3cbf29ca408e7260))
+
 ## [0.6.2](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.1...v0.6.2) (2025-07-14)
 
 
