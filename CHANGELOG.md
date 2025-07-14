@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/joel-grant/disney-scrapbook/compare/v0.3.1...v0.3.2) (2025-07-14)
+
+
+### Bug Fixes
+
+* update password env name ([59c0fd8](https://github.com/joel-grant/disney-scrapbook/commit/59c0fd85d237be498215fb1483b5146f03c52126))
+
 ## [0.3.1](https://github.com/joel-grant/disney-scrapbook/compare/v0.3.0...v0.3.1) (2025-07-14)
 
 
