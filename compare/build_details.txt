@@ -1,0 +1,2 @@
+Base branch (main) score: 100.0 
+Feature branch (add-ci-config) score: 100.0 
