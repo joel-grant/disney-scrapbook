@@ -10,22 +10,11 @@ on:
       - completed
   # Optional: Allow manual deployment
   workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Environment to deploy to'
-        required: true
-        default: 'production'
-        type: choice
-        options:
-          - production
-          - staging
-          - development
 
 jobs:
   deploy:
     uses: joel-grant/github-actions/.github/workflows/deploy.yaml@main
-    with:
-      environment: production
+    environment: production
     # Note: Permissions are inherited from the reusable workflow (contents: write)
     secrets:
       kubeconfig: ${{ secrets.KUBECONFIG }}
