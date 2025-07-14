@@ -1,14 +1,10 @@
 name: Build and Push
 
 on:
-  workflow_run:
-    workflows:
-      - "Test and Lint"
-    types:
-      - completed
-    # branches: 
-    #   - main
-  # # Optional: Allow manual builds
+  push:
+  pull_request:
+    branches: [ main ]
+
   workflow_dispatch:
 
 jobs:
