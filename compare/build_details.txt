@@ -1,2 +1,2 @@
-Base branch (main) score: 100.0 
-Feature branch (fix-deploy) score: 100.0 
+Base branch (main) score: 99.98 
+Feature branch (release-please--branches--main) score: 99.98 
