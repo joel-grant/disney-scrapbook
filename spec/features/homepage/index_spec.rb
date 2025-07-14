@@ -10,7 +10,7 @@ RSpec.describe "Homepage", type: :feature do
   end
 
   it "displays the app's goal" do
-    expect(page).to have_content("Save even the finest details about your rides, meals and stops during your Disney Vacation!")
+    expect(page).to have_content("Capture the magic, cherish the memories, and keep the wonder of your Disney vacation alive forever.")
   end
 
   it "has a link to log in" do
