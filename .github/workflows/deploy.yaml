@@ -1,0 +1,44 @@
+name: Deploy Application
+
+on:
+  workflow_run:
+    workflows:
+      - "Build and Push"
+    branches:
+      - main
+    types:
+      - completed
+  # Optional: Allow manual deployment
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+          - development
+
+jobs:
+  deploy:
+    uses: joel-grant/github-actions/.github/workflows/deploy.yaml@main
+    with:
+      environment: ${{ github.event.inputs.environment || 'production' }}
+    # Note: Permissions are inherited from the reusable workflow (contents: write)
+    secrets:
+      kubeconfig: ${{ secrets.KUBECONFIG }}
+      dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
+      secret_name: ${{ secrets.SECRET_NAME }}
+      rails_env: ${{ secrets.RAILS_ENV }}
+      rails_master_key: ${{ secrets.RAILS_MASTER_KEY }}
+      postgres_port: ${{ secrets.POSTGRES_PORT }}
+      postgres_db: ${{ secrets.POSTGRES_DB }}
+      postgres_host: ${{ secrets.POSTGRES_HOST }}
+      postgres_user: ${{ secrets.POSTGRES_USER }}
+      postgres_password: ${{ secrets.POSTGRES_PASSWORD }}
+      helm_chart: ${{ secrets.HELM_CHART }}
+      k8s_environment: ${{ secrets.K8S_ENVIRONMENT }}
+      cloudsmith_username: ${{ secrets.CLOUDSMITH_USERNAME }}
+      cloudsmith_api_key: ${{ secrets.CLOUDSMITH_API_KEY }}

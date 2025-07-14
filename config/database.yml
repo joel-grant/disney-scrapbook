@@ -81,8 +81,10 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: disney_scrapbook_production
-    username: disney_scrapbook
+    database: <%= ENV['POSTGRES_DB'] %>
+    username: <%= ENV['POSTGRES_USER'] %>
+    port: <%= ENV['POSTGRES_PORT'] %>
+    host: <%= ENV['POSTGRES_HOST'] %>
     password: <%= ENV["DISNEY_SCRAPBOOK_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
