@@ -1,11 +1,11 @@
-name: Build and Push Docker Image
+name: Build and Push
 
 on:
   push:
-  #   branches: 
-  #     - main
-  # # Optional: Allow manual builds
-  # workflow_dispatch:
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
 
 jobs:
   build-and-push:
