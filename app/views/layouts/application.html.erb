@@ -40,7 +40,7 @@
           </div>
           <div class="text-xs text-gray-500">
             v<%= DisneyScrapbook::VERSION %> of Disney Scrapbook was deployed at 
-            <%= DisneyScrapbook::DEPLOYED_AT.strftime("%B %d, %Y at %I:%M %p %Z") %>
+            <%= DisneyScrapbook::Version.deployed_at_eastern.strftime("%B %d, %Y at %I:%M %p %Z") %>
           </div>
           <div class="text-xs text-gray-600">
             This application is not affiliated with, endorsed by, or sponsored by The Walt Disney Company or its subsidiaries.

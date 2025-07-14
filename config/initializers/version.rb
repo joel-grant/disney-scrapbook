@@ -10,6 +10,10 @@ module DisneyScrapbook
       @deployed_at ||= deployment_time
     end
 
+    def self.deployed_at_eastern
+      deployed_at.in_time_zone("America/New_York")
+    end
+
     private
 
     def self.parse_changelog
