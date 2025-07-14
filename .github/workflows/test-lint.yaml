@@ -1,0 +1,17 @@
+name: Rails Test and Lint
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-and-lint:
+    uses: joel-grant/github-actions/.github/workflows/reusable_workflows/test-lint-rails.yaml@main
+    with:
+      repo_name: "disney-scrapbook"
+      ruby_version: 3.4.3
+    secrets:
+      dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
+      dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
