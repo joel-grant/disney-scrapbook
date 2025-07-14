@@ -26,6 +26,7 @@ jobs:
     # Note: Permissions are inherited from the reusable workflow (contents: write)
     secrets:
       kubeconfig: ${{ secrets.KUBECONFIG }}
+      kube_context: ${{ secrets.KUBE_CONTEXT }}
       dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
       secret_name: ${{ secrets.SECRET_NAME }}
       rails_env: ${{ secrets.RAILS_ENV }}
