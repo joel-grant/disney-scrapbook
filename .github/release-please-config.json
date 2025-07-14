@@ -3,6 +3,8 @@
   "release-type": "simple",
   "bump-minor-pre-major": true,
   "prerelease": true,
+  "prerelease-type": alpha,
+  "prerelease-label": alpha,
   "versioning": "prerelease",
   "packages": {
     ".": {
