@@ -1,7 +1,13 @@
 name: Deploy Application
 
 on:
-  push:
+  workflow_run:
+    workflows:
+      - "Build and Push"
+    branches:
+      - main
+    types:
+      - completed
   # Optional: Allow manual deployment
   workflow_dispatch:
     inputs:
