@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   deploy:
-    uses: joel-grant/github-actions/.github/workflows/deploy.yaml@fix-context
+    uses: joel-grant/github-actions/.github/workflows/deploy.yaml@main
     with:
       environment: production
     # Note: Permissions are inherited from the reusable workflow (contents: write)
