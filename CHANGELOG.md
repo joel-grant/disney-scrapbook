@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.0...v0.6.1) (2025-07-14)
+
+
+### Bug Fixes
+
+* change timestamp to eastern ([#36](https://github.com/joel-grant/disney-scrapbook/issues/36)) ([2da2ef2](https://github.com/joel-grant/disney-scrapbook/commit/2da2ef2651214ed27d79b26acbd1eec46402d35a))
+
 ## [0.6.0](https://github.com/joel-grant/disney-scrapbook/compare/v0.5.0...v0.6.0) (2025-07-14)
 
 
