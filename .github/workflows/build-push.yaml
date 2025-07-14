@@ -1,7 +1,11 @@
-name: Build and Push Docker Image
+name: Build and Push
 
 on:
-  push:
+  workflow_run:
+    workflows:
+      - "Test and Lint"
+    types:
+      - completed
   #   branches: 
   #     - main
   # # Optional: Allow manual builds
