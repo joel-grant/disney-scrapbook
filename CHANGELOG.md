@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.3-alpha.1](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.3-alpha...v0.6.3-alpha.1) (2025-07-14)
+
+
+### Bug Fixes
+
+* trigger pipeline test ([#43](https://github.com/joel-grant/disney-scrapbook/issues/43)) ([2e3cf2f](https://github.com/joel-grant/disney-scrapbook/commit/2e3cf2f7abbd91ecd8adcae6c77bc48f10917a20))
+
 ## [0.6.3-alpha](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.2...v0.6.3-alpha) (2025-07-14)
 
 
