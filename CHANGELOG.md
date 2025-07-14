@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/joel-grant/disney-scrapbook/compare/v0.5.0...v0.6.0) (2025-07-14)
+
+
+### Features
+
+* **footer:** added a nice footer ([#33](https://github.com/joel-grant/disney-scrapbook/issues/33)) ([91a12ac](https://github.com/joel-grant/disney-scrapbook/commit/91a12ac04d76f3e649c90dd783cfee82d8752fe4))
+
 ## [0.5.0](https://github.com/joel-grant/disney-scrapbook/compare/v0.4.0...v0.5.0) (2025-07-14)
 
 
