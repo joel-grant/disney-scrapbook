@@ -21,6 +21,9 @@ on:
           - staging
           - development
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     uses: joel-grant/github-actions/.github/workflows/deploy.yaml@main
