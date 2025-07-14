@@ -20,8 +20,8 @@
       <a href="../overview.html"><img src="../assets/images/logo.png" alt="Ruby Critic Logo" title="Ruby Critic Logo" width="55"><span class="logo">RUBYCRITIC</span></a>
       
         <ul class="nav navbar-nav navbar-right">
-          <a href="../overview.html"><span class="branch">main</span></a>
-          <a href="../../v0.3.1/overview.html"><span class="branch">v0.3.1</span></a>
+          <a href="../../main/config/routes.html"><span class="branch">main</span></a>
+          <a href="../overview.html"><span class="branch">v0.3.1</span></a>
           <a href="../../overview.html"><span class="branch">Build</span></a>
         </ul>
       
@@ -58,7 +58,7 @@
       </span>
     </div>
     <div>
-      <h3><small>config /</small> environment.rb</h3>
+      <h3><small>config /</small> routes.rb</h3>
     </div>
   </div>
   <!--End Page Title -->
@@ -74,7 +74,7 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">5</span><small> lines of codes</small></div>
+              <div><span class="metric">14</span><small> lines of codes</small></div>
               <div><span class="metric">0</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
@@ -103,11 +103,20 @@
       </div>
     </div>
 
-    <code class="prettyprint linenums lang-ruby file-code js-file-code"># Load the Rails application.
-require_relative &quot;application&quot;
+    <code class="prettyprint linenums lang-ruby file-code js-file-code">Rails.application.routes.draw do
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-# Initialize the Rails application.
-Rails.application.initialize!
+  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
+  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  get &quot;up&quot; =&gt; &quot;rails/health#show&quot;, as: :rails_health_check
+
+  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
+  # get &quot;manifest&quot; =&gt; &quot;rails/pwa#manifest&quot;, as: :pwa_manifest
+  # get &quot;service-worker&quot; =&gt; &quot;rails/pwa#service_worker&quot;, as: :pwa_service_worker
+
+  # Defines the root path route (&quot;/&quot;)
+  # root &quot;posts#index&quot;
+end
 </code>
   </div>
 </div>
