@@ -20,9 +20,9 @@
       <a href="overview.html"><img src="assets/images/logo.png" alt="Ruby Critic Logo" title="Ruby Critic Logo" width="55"><span class="logo">RUBYCRITIC</span></a>
       
         <ul class="nav navbar-nav navbar-right">
-          <a href="main/simple_cov_index.html"><span class="branch">main</span></a>
-          <a href="fix-deploy-again/simple_cov_index.html"><span class="branch">fix-deploy-again</span></a>
-          <a href="overview.html"><span class="branch">Build</span></a>
+          <a href="../main/smells_index.html"><span class="branch">main</span></a>
+          <a href="overview.html"><span class="branch">fix-deploy-again</span></a>
+          <a href="../overview.html"><span class="branch">Build</span></a>
         </ul>
       
     </header>
@@ -53,20 +53,114 @@
     <div class="row">
       <!--Page Title -->
       <div class="Page_Title">
-        <h3>Coverage</h3>
+        <h3>Smells</h3>
       </div>
       <!--End Page Title -->
       <div class="Content_Wrapper">
-        <table id="coverageTable" class="table index-table sortable-table tablesorter">
+        <table id="smellsTable" class="table smells-index-table index-table sortable-table">
           <thead>
             <tr>
-              
-                <th width="10%" class="table-header">Rating<span class="sort-type"></span></th>
-              
-              <th width="80%" class="table-header">Name<span class="sort-type"></span></th>
-              <th width="10%" class="table-header">Coverage<span class="sort-type"></span></th>
+              <th width="30%" class="table-header">Smell<span class="sort-type"></span></th>
+              <th width="65%" class="table-header">Locations<span class="sort-type"></span></th>
+              <th width="5%" class="table-header">Status<span class="sort-type"></span></th>
             </tr>
           </thead>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/application_controller.html#L1">ApplicationController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/helpers/application_helper.html#L1">ApplicationHelper</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/jobs/application_job.html#L1">ApplicationJob</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/mailers/application_mailer.html#L1">ApplicationMailer</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/models/application_record.html#L1">ApplicationRecord</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="config/application.html#L22">Application</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+              </td>
+            </tr>
           
         </table>
       </div>

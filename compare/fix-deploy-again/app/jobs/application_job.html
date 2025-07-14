@@ -20,8 +20,8 @@
       <a href="../../overview.html"><img src="../../assets/images/logo.png" alt="Ruby Critic Logo" title="Ruby Critic Logo" width="55"><span class="logo">RUBYCRITIC</span></a>
       
         <ul class="nav navbar-nav navbar-right">
-          <a href="../../overview.html"><span class="branch">main</span></a>
-          <a href="../../../fix-deploy-again/overview.html"><span class="branch">fix-deploy-again</span></a>
+          <a href="../../../main/app/jobs/application_job.html"><span class="branch">main</span></a>
+          <a href="../../overview.html"><span class="branch">fix-deploy-again</span></a>
           <a href="../../../overview.html"><span class="branch">Build</span></a>
         </ul>
       
@@ -58,7 +58,7 @@
       </span>
     </div>
     <div>
-      <h3><small>config/initializers /</small> assets.rb</h3>
+      <h3><small>app/jobs /</small> application_job.rb</h3>
     </div>
   </div>
   <!--End Page Title -->
@@ -94,7 +94,7 @@
             <li><a href="#" id="toggle-code" class="toggle-button button">code</a></li>
             <li class="active">
               <a href="#" id="toggle-smells" class="toggle-button button">
-                0
+                1
                 smell
               </a>
             </li>
@@ -103,13 +103,13 @@
       </div>
     </div>
 
-    <code class="prettyprint linenums lang-ruby file-code js-file-code"># Be sure to restart your server when you modify this file.
+    <code class="prettyprint linenums lang-ruby file-code js-file-code">class ApplicationJob &lt; ActiveJob::Base<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md" target="_blank"><b>IrresponsibleModule</b></a>        </span>      </div>      <span>ApplicationJob has no descriptive comment</span>          </div>  </li></ol>
+  # Automatically retry jobs that encountered a deadlock
+  # retry_on ActiveRecord::Deadlocked
 
-# Version of your assets, change this if you want to expire all your assets.
-Rails.application.config.assets.version = &quot;1.0&quot;
-
-# Add additional assets to the asset load path.
-# Rails.application.config.assets.paths &lt;&lt; Emoji.images_path
+  # Most jobs are safe to ignore if the underlying records are no longer available
+  # discard_on ActiveJob::DeserializationError
+end
 </code>
   </div>
 </div>
