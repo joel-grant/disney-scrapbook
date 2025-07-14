@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/joel-grant/disney-scrapbook/compare/v0.4.0...v0.5.0) (2025-07-14)
+
+
+### Features
+
+* save tailwind setup/plaggrounding ([#25](https://github.com/joel-grant/disney-scrapbook/issues/25)) ([692760c](https://github.com/joel-grant/disney-scrapbook/commit/692760c1aedab0cc0f66e956155f1e28130c1c22))
+
 ## [0.4.0](https://github.com/joel-grant/disney-scrapbook/compare/v0.3.2...v0.4.0) (2025-07-14)
 
 
