@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.13.1/application.js' type='text/javascript'></script>
     <link href='./assets/0.13.1/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
-    <link rel="icon" type="image/png" href="./assets/0.13.1/favicon_green.png" />
+    <link rel="icon" type="image/png" href="./assets/0.13.1/favicon_yellow.png" />
   </head>
 
   <body>
@@ -13,7 +13,7 @@
       <img src="./assets/0.13.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-07-14T14:17:24-06:00">2025-07-14T14:17:24-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-07-14T14:56:21-06:00">2025-07-14T14:56:21-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -21,15 +21,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="green">
-  100.0%
+      <span class="yellow">
+  89.87%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="red">
+         0.9
        </span>
     </span> hits/line
     )
@@ -38,15 +38,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>12</b> files in total.
+    <b>13</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>47</b> relevant lines,
-    <span class="green"><b>47</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
-    (<span class="green">
-  100.0%
+    <b>79</b> relevant lines,
+    <span class="green"><b>71</b> lines covered</span> and
+    <span class="red"><b>8</b> lines missed. </span>
+    (<span class="yellow">
+  89.87%
 </span>
 )
   </div>
@@ -83,7 +83,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#7521da4e4d0a576a11e29124307e219fce037d02" class="src_link" title="app/controllers/homepage_controller.rb">app/controllers/homepage_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">5</td>
             <td class="cell--number">2</td>
             <td class="cell--number">2</td>
             <td class="cell--number">0</td>
@@ -187,6 +187,17 @@
             <td class="cell--number">0</td>
             <td class="cell--number">0</td>
             <td class="cell--number">0.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#82037cf041b88f7262a0d61c676154a67d39eef3" class="src_link" title="config/initializers/version.rb">config/initializers/version.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">75.00 %</td>
+            <td class="cell--number">70</td>
+            <td class="cell--number">32</td>
+            <td class="cell--number">24</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">0.75</td>
             
           </tr>
         
@@ -320,14 +331,12 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            
-              <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="1">
             
 
             
 
-            <code class="ruby">class HomepageController &lt; ApplicationController</code>
+            <code class="ruby"># Home Page/Landing Page of the Disney Scrapbook Application</code>
           </li>
         </div>
       
@@ -339,12 +348,24 @@
 
             
 
+            <code class="ruby">class HomepageController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            
+              <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  def index</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="3">
+          <li class="never" data-hits="" data-linenumber="4">
             
 
             
@@ -354,7 +375,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
+          <li class="never" data-hits="" data-linenumber="5">
             
 
             
@@ -2337,6 +2358,785 @@
             
 
             <code class="ruby"># end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="82037cf041b88f7262a0d61c676154a67d39eef3">
+  <div class="header">
+    <h3>config/initializers/version.rb</h3>
+    <h4>
+      <span class="red">
+  75.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>32</b> relevant lines.
+      <span class="green"><b>24</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="1">
+            
+
+            
+
+            <code class="ruby"># frozen_string_literal: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">module DisneyScrapbook</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  class Version</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.current</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      @current ||= parse_changelog</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.deployed_at</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      @deployed_at ||= deployment_time</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.parse_changelog</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      changelog_path = Rails.root.join(&quot;CHANGELOG.md&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      return &quot;0.0.0&quot; unless File.exist?(changelog_path)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      content = File.read(changelog_path)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+
+            
+
+            <code class="ruby">      # Match the first version pattern like [0.5.0]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      match = content.match(/## \[(\d+\.\d+\.\d+)\]/)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      match ? match[1] : &quot;0.0.0&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+
+            
+
+            <code class="ruby">    rescue</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="24">
+            
+
+            
+
+            <code class="ruby">      &quot;0.0.0&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="27">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.deployment_time</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+
+            
+
+            <code class="ruby">      # Try to get deployment time from various sources in order of preference</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+
+            
+
+            <code class="ruby">      # 1. Check for DEPLOYED_AT environment variable (set during deployment)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="31">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      return Time.parse(ENV[&#39;DEPLOYED_AT&#39;]) if ENV[&#39;DEPLOYED_AT&#39;].present?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+
+            
+
+            <code class="ruby">      # 2. Try to get git commit timestamp</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="34">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      git_commit_time = get_git_commit_time</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="35">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      return git_commit_time if git_commit_time</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+
+            
+
+            <code class="ruby">      # 3. Check modification time of key application files</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+
+            
+
+            <code class="ruby">      key_files = [</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="39">
+            
+
+            
+
+            <code class="ruby">        Rails.root.join(&quot;Gemfile.lock&quot;),</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
+            
+
+            
+
+            <code class="ruby">        Rails.root.join(&quot;config&quot;, &quot;application.rb&quot;),</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
+            
+
+            
+
+            <code class="ruby">        Rails.root.join(&quot;app&quot;, &quot;controllers&quot;, &quot;application_controller.rb&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+
+            
+
+            <code class="ruby">      ]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="44">
+            
+
+            
+
+            <code class="ruby">      latest_file_time = key_files.map do |file|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="45">
+            
+
+            
+
+            <code class="ruby">        File.exist?(file) ? File.mtime(file) : nil</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+
+            
+
+            <code class="ruby">      end.compact.max</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="47">
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="48">
+            
+
+            
+
+            <code class="ruby">      return latest_file_time if latest_file_time</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
+            
+
+            
+
+            <code class="ruby">      # 4. Fall back to application boot time</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="51">
+            
+
+            
+
+            <code class="ruby">      Rails.application.config.deployed_at || Time.current</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+
+            
+
+            <code class="ruby">    rescue</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="53">
+            
+
+            
+
+            <code class="ruby">      Time.current</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="54">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="55">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="56">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def self.get_git_commit_time</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="57">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      return nil unless File.exist?(Rails.root.join(&quot;.git&quot;))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="58">
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      result = `git log -1 --format=%cI 2&gt;/dev/null`.strip</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="60">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      return nil if result.empty?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
+            
+
+            
+
+            <code class="ruby">      </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="62">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      Time.parse(result)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="63">
+            
+
+            
+
+            <code class="ruby">    rescue</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="64">
+            
+
+            
+
+            <code class="ruby">      nil</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  VERSION = Version.current.freeze</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="69">
+            
+              <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  DEPLOYED_AT = Version.deployed_at.freeze</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+
+            
+
+            <code class="ruby">end</code>
           </li>
         </div>
       

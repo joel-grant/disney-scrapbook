@@ -30,5 +30,15 @@
 
   <body class="h-full">
     <%= yield %>
+    
+    <!-- Footer with version information -->
+    <footer class="bg-gray-900 text-gray-400 py-4">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center text-sm">
+          v<%= DisneyScrapbook::VERSION %> of Disney Scrapbook was deployed at 
+          <%= DisneyScrapbook::DEPLOYED_AT.strftime("%B %d, %Y at %I:%M %p %Z") %>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
