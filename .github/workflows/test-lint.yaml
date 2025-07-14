@@ -8,7 +8,7 @@ on:
 
 jobs:
   test-and-lint:
-    uses: joel-grant/github-actions/.github/reusable_workflows/test-lint-rails.yaml@main
+    uses: joel-grant/github-actions/.github/workflows/reusable_workflows/test-lint-rails.yaml@main
     with:
       repo_name: "disney-scrapbook"
       ruby_version: 3.4.3
