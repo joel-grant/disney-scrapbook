@@ -20,8 +20,8 @@
       <a href="../../overview.html"><img src="../../assets/images/logo.png" alt="Ruby Critic Logo" title="Ruby Critic Logo" width="55"><span class="logo">RUBYCRITIC</span></a>
       
         <ul class="nav navbar-nav navbar-right">
-          <a href="../../overview.html"><span class="branch">main</span></a>
-          <a href="../../../fix-deploy/overview.html"><span class="branch">fix-deploy</span></a>
+          <a href="../../../main/config/initializers/content_security_policy.html"><span class="branch">main</span></a>
+          <a href="../../overview.html"><span class="branch">fix-deploy</span></a>
           <a href="../../../overview.html"><span class="branch">Build</span></a>
         </ul>
       
@@ -58,7 +58,7 @@
       </span>
     </div>
     <div>
-      <h3><small>config/initializers /</small> inflections.rb</h3>
+      <h3><small>config/initializers /</small> content_security_policy.rb</h3>
     </div>
   </div>
   <!--End Page Title -->
@@ -74,7 +74,7 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">16</span><small> lines of codes</small></div>
+              <div><span class="metric">25</span><small> lines of codes</small></div>
               <div><span class="metric">0</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
@@ -105,19 +105,28 @@
 
     <code class="prettyprint linenums lang-ruby file-code js-file-code"># Be sure to restart your server when you modify this file.
 
-# Add new inflection rules using the following format. Inflections
-# are locale specific, and you may define rules for as many different
-# locales as you wish. All of these examples are active by default:
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#   inflect.plural /^(ox)$/i, &quot;\\1en&quot;
-#   inflect.singular /^(ox)en/i, &quot;\\1&quot;
-#   inflect.irregular &quot;person&quot;, &quot;people&quot;
-#   inflect.uncountable %w( fish sheep )
-# end
+# Define an application-wide content security policy.
+# See the Securing Rails Applications Guide for more information:
+# https://guides.rubyonrails.org/security.html#content-security-policy-header
 
-# These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#   inflect.acronym &quot;RESTful&quot;
+# Rails.application.configure do
+#   config.content_security_policy do |policy|
+#     policy.default_src :self, :https
+#     policy.font_src    :self, :https, :data
+#     policy.img_src     :self, :https, :data
+#     policy.object_src  :none
+#     policy.script_src  :self, :https
+#     policy.style_src   :self, :https
+#     # Specify URI for violation reports
+#     # policy.report_uri &quot;/csp-violation-report-endpoint&quot;
+#   end
+#
+#   # Generate session nonces for permitted importmap, inline scripts, and inline styles.
+#   config.content_security_policy_nonce_generator = -&gt;(request) { request.session.id.to_s }
+#   config.content_security_policy_nonce_directives = %w(script-src style-src)
+#
+#   # Report violations without enforcing the policy.
+#   # config.content_security_policy_report_only = true
 # end
 </code>
   </div>
