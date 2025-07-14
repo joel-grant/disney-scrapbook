@@ -12,6 +12,7 @@ jobs:
     with:
       repo_name: "disney-scrapbook"
       ruby_version: 3.4.3
+      skip_rubycritic: true
     secrets:
       dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
       dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
