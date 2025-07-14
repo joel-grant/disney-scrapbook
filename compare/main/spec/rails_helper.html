@@ -21,7 +21,7 @@
       
         <ul class="nav navbar-nav navbar-right">
           <a href="../overview.html"><span class="branch">main</span></a>
-          <a href="../../release/1.0.0/overview.html"><span class="branch">release/1.0.0</span></a>
+          <a href="../../fix-timestamp/overview.html"><span class="branch">fix-timestamp</span></a>
           <a href="../../overview.html"><span class="branch">Build</span></a>
         </ul>
       
@@ -53,7 +53,7 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2025-07-14 12:16:33 -0600'>2025-07-14 12:16:33 -0600</time>
+          Updated <time class='js-timeago' datetime='2025-07-14 15:14:43 -0600'>2025-07-14 15:14:43 -0600</time>
         
       </span>
     </div>
@@ -74,12 +74,12 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">72</span><small> lines of codes</small></div>
+              <div><span class="metric">74</span><small> lines of codes</small></div>
               <div><span class="metric">0</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">N/A</span><small> complexity/method</small></div>
-              <div><span class="metric">3</span><small> churn</small></div>
+              <div><span class="metric">4</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">0.0</span><small> complexity</small></div>
@@ -105,6 +105,8 @@
 
     <code class="prettyprint linenums lang-ruby file-code js-file-code"># This file is copied to spec/ when you run &#39;rails generate rspec:install&#39;
 require &#39;spec_helper&#39;
+require &#39;simplecov&#39;
+SimpleCov.start
 ENV[&#39;RAILS_ENV&#39;] ||= &#39;test&#39;
 require_relative &#39;../config/environment&#39;
 # Prevent database truncation if the environment is production

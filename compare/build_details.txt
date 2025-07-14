@@ -1,2 +1,2 @@
-Base branch (main) score: 99.98 
-Feature branch (release/1.0.0) score: 99.98 
+Base branch (main) score: 99.13 
+Feature branch (fix-timestamp) score: 99.13 
