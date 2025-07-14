@@ -16,9 +16,8 @@ RSpec.describe "Homepage", type: :feature do
   it "has a link to log in" do
     expect(page).to have_link("Log in")
   end
-  
+
   it "has a link to get started" do
     expect(page).to have_link("Get started")
   end
-
 end
