@@ -218,10 +218,11 @@
           null
         ]
       },
-      "/Users/joelgrant/dev/projects/disney-scrapbook/app/controllers/home_controller.rb": {
+      "/Users/joelgrant/dev/projects/disney-scrapbook/app/controllers/homepage_controller.rb": {
         "lines": [
           1,
           1,
+          null,
           null
         ]
       },
@@ -234,6 +235,6 @@
         ]
       }
     },
-    "timestamp": 1752516886
+    "timestamp": 1752524244
   }
 }
