@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/joel-grant/disney-scrapbook/compare/v0.3.2...v0.4.0) (2025-07-14)
+
+
+### Features
+
+* set basic page ([#22](https://github.com/joel-grant/disney-scrapbook/issues/22)) ([9b3e08f](https://github.com/joel-grant/disney-scrapbook/commit/9b3e08fc01cab2e55a8b5edde41254243e91fc30))
+
 ## [0.3.2](https://github.com/joel-grant/disney-scrapbook/compare/v0.3.1...v0.3.2) (2025-07-14)
 
 
