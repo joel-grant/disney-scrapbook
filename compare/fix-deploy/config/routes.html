@@ -20,8 +20,8 @@
       <a href="../overview.html"><img src="../assets/images/logo.png" alt="Ruby Critic Logo" title="Ruby Critic Logo" width="55"><span class="logo">RUBYCRITIC</span></a>
       
         <ul class="nav navbar-nav navbar-right">
-          <a href="../overview.html"><span class="branch">main</span></a>
-          <a href="../../fix-deploy/overview.html"><span class="branch">fix-deploy</span></a>
+          <a href="../../main/config/routes.html"><span class="branch">main</span></a>
+          <a href="../overview.html"><span class="branch">fix-deploy</span></a>
           <a href="../../overview.html"><span class="branch">Build</span></a>
         </ul>
       
@@ -53,12 +53,12 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2025-07-13 23:22:38 -0600'>2025-07-13 23:22:38 -0600</time>
+          Updated <time class='js-timeago' datetime='2025-07-14 00:38:44 -0600'>2025-07-14 00:38:44 -0600</time>
         
       </span>
     </div>
     <div>
-      <h3><small>config /</small> boot.rb</h3>
+      <h3><small>config /</small> routes.rb</h3>
     </div>
   </div>
   <!--End Page Title -->
@@ -74,12 +74,12 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">4</span><small> lines of codes</small></div>
+              <div><span class="metric">14</span><small> lines of codes</small></div>
               <div><span class="metric">0</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">N/A</span><small> complexity/method</small></div>
-              <div><span class="metric">2</span><small> churn</small></div>
+              <div><span class="metric">3</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">0.0</span><small> complexity</small></div>
@@ -103,10 +103,20 @@
       </div>
     </div>
 
-    <code class="prettyprint linenums lang-ruby file-code js-file-code">ENV[&quot;BUNDLE_GEMFILE&quot;] ||= File.expand_path(&quot;../Gemfile&quot;, __dir__)
+    <code class="prettyprint linenums lang-ruby file-code js-file-code">Rails.application.routes.draw do
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-require &quot;bundler/setup&quot; # Set up gems listed in the Gemfile.
-require &quot;bootsnap/setup&quot; # Speed up boot time by caching expensive operations.
+  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
+  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  get &quot;up&quot; =&gt; &quot;rails/health#show&quot;, as: :rails_health_check
+
+  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
+  # get &quot;manifest&quot; =&gt; &quot;rails/pwa#manifest&quot;, as: :pwa_manifest
+  # get &quot;service-worker&quot; =&gt; &quot;rails/pwa#service_worker&quot;, as: :pwa_service_worker
+
+  # Defines the root path route (&quot;/&quot;)
+  # root &quot;posts#index&quot;
+end
 </code>
   </div>
 </div>

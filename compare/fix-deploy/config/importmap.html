@@ -20,8 +20,8 @@
       <a href="../overview.html"><img src="../assets/images/logo.png" alt="Ruby Critic Logo" title="Ruby Critic Logo" width="55"><span class="logo">RUBYCRITIC</span></a>
       
         <ul class="nav navbar-nav navbar-right">
-          <a href="../overview.html"><span class="branch">main</span></a>
-          <a href="../../fix-deploy/overview.html"><span class="branch">fix-deploy</span></a>
+          <a href="../../main/config/importmap.html"><span class="branch">main</span></a>
+          <a href="../overview.html"><span class="branch">fix-deploy</span></a>
           <a href="../../overview.html"><span class="branch">Build</span></a>
         </ul>
       
@@ -58,7 +58,7 @@
       </span>
     </div>
     <div>
-      <h3><small>config /</small> boot.rb</h3>
+      <h3><small>config /</small> importmap.rb</h3>
     </div>
   </div>
   <!--End Page Title -->
@@ -74,7 +74,7 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">4</span><small> lines of codes</small></div>
+              <div><span class="metric">7</span><small> lines of codes</small></div>
               <div><span class="metric">0</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
@@ -103,10 +103,13 @@
       </div>
     </div>
 
-    <code class="prettyprint linenums lang-ruby file-code js-file-code">ENV[&quot;BUNDLE_GEMFILE&quot;] ||= File.expand_path(&quot;../Gemfile&quot;, __dir__)
+    <code class="prettyprint linenums lang-ruby file-code js-file-code"># Pin npm packages by running ./bin/importmap
 
-require &quot;bundler/setup&quot; # Set up gems listed in the Gemfile.
-require &quot;bootsnap/setup&quot; # Speed up boot time by caching expensive operations.
+pin &quot;application&quot;
+pin &quot;@hotwired/turbo-rails&quot;, to: &quot;turbo.min.js&quot;
+pin &quot;@hotwired/stimulus&quot;, to: &quot;stimulus.min.js&quot;
+pin &quot;@hotwired/stimulus-loading&quot;, to: &quot;stimulus-loading.js&quot;
+pin_all_from &quot;app/javascript/controllers&quot;, under: &quot;controllers&quot;
 </code>
   </div>
 </div>
