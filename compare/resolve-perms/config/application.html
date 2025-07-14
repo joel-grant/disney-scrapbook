@@ -20,8 +20,8 @@
       <a href="../overview.html"><img src="../assets/images/logo.png" alt="Ruby Critic Logo" title="Ruby Critic Logo" width="55"><span class="logo">RUBYCRITIC</span></a>
       
         <ul class="nav navbar-nav navbar-right">
-          <a href="../overview.html"><span class="branch">main</span></a>
-          <a href="../../resolve-perms/overview.html"><span class="branch">resolve-perms</span></a>
+          <a href="../../main/config/application.html"><span class="branch">main</span></a>
+          <a href="../overview.html"><span class="branch">resolve-perms</span></a>
           <a href="../../overview.html"><span class="branch">Build</span></a>
         </ul>
       
@@ -58,7 +58,7 @@
       </span>
     </div>
     <div>
-      <h3><small>config /</small> routes.rb</h3>
+      <h3><small>config /</small> application.rb</h3>
     </div>
   </div>
   <!--End Page Title -->
@@ -74,7 +74,7 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">14</span><small> lines of codes</small></div>
+              <div><span class="metric">42</span><small> lines of codes</small></div>
               <div><span class="metric">0</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
@@ -94,7 +94,7 @@
             <li><a href="#" id="toggle-code" class="toggle-button button">code</a></li>
             <li class="active">
               <a href="#" id="toggle-smells" class="toggle-button button">
-                0
+                1
                 smell
               </a>
             </li>
@@ -103,19 +103,47 @@
       </div>
     </div>
 
-    <code class="prettyprint linenums lang-ruby file-code js-file-code">Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+    <code class="prettyprint linenums lang-ruby file-code js-file-code">require_relative &quot;boot&quot;
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get &quot;up&quot; =&gt; &quot;rails/health#show&quot;, as: :rails_health_check
+require &quot;rails&quot;
+# Pick the frameworks you want:
+require &quot;active_model/railtie&quot;
+require &quot;active_job/railtie&quot;
+require &quot;active_record/railtie&quot;
+require &quot;active_storage/engine&quot;
+require &quot;action_controller/railtie&quot;
+require &quot;action_mailer/railtie&quot;
+require &quot;action_mailbox/engine&quot;
+require &quot;action_text/engine&quot;
+require &quot;action_view/railtie&quot;
+require &quot;action_cable/engine&quot;
+# require &quot;rails/test_unit/railtie&quot;
 
-  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
-  # get &quot;manifest&quot; =&gt; &quot;rails/pwa#manifest&quot;, as: :pwa_manifest
-  # get &quot;service-worker&quot; =&gt; &quot;rails/pwa#service_worker&quot;, as: :pwa_service_worker
+# Require the gems listed in Gemfile, including any gems
+# you&#39;ve limited to :test, :development, or :production.
+Bundler.require(*Rails.groups)
 
-  # Defines the root path route (&quot;/&quot;)
-  # root &quot;posts#index&quot;
+module DisneyScrapbook
+  class Application &lt; Rails::Application<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md" target="_blank"><b>IrresponsibleModule</b></a>        </span>      </div>      <span>DisneyScrapbook::Application has no descriptive comment</span>          </div>  </li></ol>
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 8.0
+
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    config.autoload_lib(ignore: %w[assets tasks])
+
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
+    # config.time_zone = &quot;Central Time (US &amp; Canada)&quot;
+    # config.eager_load_paths &lt;&lt; Rails.root.join(&quot;extras&quot;)
+
+    # Don&#39;t generate system test files.
+    config.generators.system_tests = nil
+  end
 end
 </code>
   </div>

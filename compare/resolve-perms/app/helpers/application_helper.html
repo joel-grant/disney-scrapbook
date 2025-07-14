@@ -20,8 +20,8 @@
       <a href="../../overview.html"><img src="../../assets/images/logo.png" alt="Ruby Critic Logo" title="Ruby Critic Logo" width="55"><span class="logo">RUBYCRITIC</span></a>
       
         <ul class="nav navbar-nav navbar-right">
-          <a href="../../overview.html"><span class="branch">main</span></a>
-          <a href="../../../resolve-perms/overview.html"><span class="branch">resolve-perms</span></a>
+          <a href="../../../main/app/helpers/application_helper.html"><span class="branch">main</span></a>
+          <a href="../../overview.html"><span class="branch">resolve-perms</span></a>
           <a href="../../../overview.html"><span class="branch">Build</span></a>
         </ul>
       
@@ -58,7 +58,7 @@
       </span>
     </div>
     <div>
-      <h3><small>config/initializers /</small> assets.rb</h3>
+      <h3><small>app/helpers /</small> application_helper.rb</h3>
     </div>
   </div>
   <!--End Page Title -->
@@ -74,7 +74,7 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">7</span><small> lines of codes</small></div>
+              <div><span class="metric">2</span><small> lines of codes</small></div>
               <div><span class="metric">0</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
@@ -94,7 +94,7 @@
             <li><a href="#" id="toggle-code" class="toggle-button button">code</a></li>
             <li class="active">
               <a href="#" id="toggle-smells" class="toggle-button button">
-                0
+                1
                 smell
               </a>
             </li>
@@ -103,13 +103,8 @@
       </div>
     </div>
 
-    <code class="prettyprint linenums lang-ruby file-code js-file-code"># Be sure to restart your server when you modify this file.
-
-# Version of your assets, change this if you want to expire all your assets.
-Rails.application.config.assets.version = &quot;1.0&quot;
-
-# Add additional assets to the asset load path.
-# Rails.application.config.assets.paths &lt;&lt; Emoji.images_path
+    <code class="prettyprint linenums lang-ruby file-code js-file-code">module ApplicationHelper<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md" target="_blank"><b>IrresponsibleModule</b></a>        </span>      </div>      <span>ApplicationHelper has no descriptive comment</span>          </div>  </li></ol>
+end
 </code>
   </div>
 </div>
