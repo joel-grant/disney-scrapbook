@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/joel-grant/disney-scrapbook/compare/v0.3.0...v0.3.1) (2025-07-14)
+
+
+### Bug Fixes
+
+* resolve db issue ([#14](https://github.com/joel-grant/disney-scrapbook/issues/14)) ([7a08cac](https://github.com/joel-grant/disney-scrapbook/commit/7a08cac990e0c809610a2f114d0d66c23fc94330))
+
 ## [0.3.0](https://github.com/joel-grant/disney-scrapbook/compare/v0.2.0...v0.3.0) (2025-07-14)
 
 
