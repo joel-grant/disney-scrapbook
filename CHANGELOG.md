@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0-alpha.2](https://github.com/joel-grant/disney-scrapbook/compare/v0.7.0-alpha.1...v0.7.0-alpha.2) (2025-07-15)
+
+
+### Bug Fixes
+
+* update the regex rules for the version updates ([#52](https://github.com/joel-grant/disney-scrapbook/issues/52)) ([72da5e8](https://github.com/joel-grant/disney-scrapbook/commit/72da5e81a3d131766e33105acfe5b3ab417f16c5))
+
 ## [0.7.0-alpha.1](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.3-alpha.1...v0.7.0-alpha.1) (2025-07-15)
 
 
