@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.7.0-alpha.6](https://github.com/joel-grant/disney-scrapbook/compare/v0.7.0-alpha.5...v0.7.0-alpha.6) (2025-07-15)
+
+
+### Features
+
+* set up parks data ([082f74b](https://github.com/joel-grant/disney-scrapbook/commit/082f74b54d0f91d675de043e6c688d607c1ef390))
+
+
+### Bug Fixes
+
+* resolve controller name issue ([bb389b0](https://github.com/joel-grant/disney-scrapbook/commit/bb389b0624323f5905a9aca4c817420cbc28591b))
+* resolve db setup issues ([#64](https://github.com/joel-grant/disney-scrapbook/issues/64)) ([36ee6e2](https://github.com/joel-grant/disney-scrapbook/commit/36ee6e2264345bc65e12e46507df20ae64807f76))
+
 ## [0.7.0-alpha.5](https://github.com/joel-grant/disney-scrapbook/compare/v0.7.0-alpha.4...v0.7.0-alpha.5) (2025-07-15)
 
 
