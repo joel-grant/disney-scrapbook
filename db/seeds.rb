@@ -15,70 +15,311 @@
 #   password: "crazy_password",
 #   password_confirmation: "crazy_password"
 # )
+#
 
-Park.create!(
-  name: "Magic Kingdom",
-  location: "Walt Disney World"
-)
-Park.create!(
-  name: "EPCOT",
-  location: "Walt Disney World"
-)
-Park.create!(
-  name: "Disney's Hollywood Studios",
-  location: "Walt Disney World"
-)
-Park.create!(
-  name: "Disney's Animal Kingdom",
-  location: "Walt Disney World"
-)
 
-Park.create!(
-  name: "Disneyland Park",
-  location: "Disneyland Resort"
-)
-Park.create!(
-  name: "Disney California Adventure Park",
-  location: "Disneyland Resort"
-)
+disney_world = Resort.create!(name: "Walt Disney World Resort")
+disneyland = Resort.create!(name: "Disneyland Resort")
+tokyo_disney = Resort.create!(name: "Tokyo Disney Resort")
+hong_kong_disney = Resort.create!(name: "Hong Kong Disneyland Resort")
+shanghai_disney = Resort.create!(name: "Shanghai Disney Resort")
+disneyland_paris = Resort.create!(name: "Disneyland Paris")
+aulani = Resort.create!(name: "Aulani, A Disney Resort & Spa")
+disney_vero_beach = Resort.create!(name: "Disney's Vero Beach Resort")
+# Create parks
+magic_kingdom = disney_world.parks.create!(name: "Magic Kingdom")
+epcot = disney_world.parks.create!(name: "EPCOT")
+disney_hollywood_studios = disney_world.parks.create!(name: "Disney's Hollywood Studios")
+disney_animal_kingdom = disney_world.parks.create!(name: "Disney's Animal Kingdom")
+disneyland_park = disneyland.parks.create!(name: "Disneyland Park")
+disney_california_adventure = disneyland.parks.create!(name: "Disney California Adventure Park")
+tokyo_disneyland = tokyo_disney.parks.create!(name: "Tokyo Disneyland")
+tokyo_disneysea = tokyo_disney.parks.create!(name: "Tokyo DisneySea")
+hong_kong_disneyland = hong_kong_disney.parks.create!(name: "Hong Kong Disneyland")
+shanghai_disneyland = shanghai_disney.parks.create!(name: "Shanghai Disneyland")
+disneyland_paris_park = disneyland_paris.parks.create!(name: "Disneyland Park")
+walt_disney_studios_paris = disneyland_paris.parks.create!(name: "Walt Disney Studios Park")
 
-Park.create!(
-  name: "Tokyo Disneyland",
-  location: "Tokyo Disney Resort"
-)
-Park.create!(
-  name: "Tokyo DisneySea",
-  location: "Tokyo Disney Resort"
-)
-Park.create!(
-  name: "Hong Kong Disneyland",
-  location: "Hong Kong Disneyland Resort"
-)
-Park.create!(
-  name: "Shanghai Disneyland",
-  location: "Shanghai Disney Resort"
-)
-Park.create!(
-  name: "Disneyland Paris",
-  location: "Disneyland Paris"
-)
-Park.create!(
-  name: "Walt Disney Studios Park",
-  location: "Disneyland Paris"
-)
-Park.create!(
-  name: "Disney's Typhoon Lagoon",
-  location: "Walt Disney World"
-)
-Park.create!(
-  name: "Disney's Blizzard Beach",
-  location: "Walt Disney World"
-)
-Park.create!(
-  name: "Aulani, A Disney Resort & Spa",
-  location: "Ko Olina, Hawaii"
-)
-Park.create!(
-  name: "Disney's Vero Beach Resort",
-  location: "Vero Beach, Florida"
-)
+# Create resort hotels
+grand_floridian = disney_world.resort_hotels.create!(name: "Disney's Grand Floridian Resort & Spa")
+polynesian = disney_world.resort_hotels.create!(name: "Disney's Polynesian Village Resort")
+contemporary = disney_world.resort_hotels.create!(name: "Disney's Contemporary Resort")
+wilderness_lodge = disney_world.resort_hotels.create!(name: "Disney's Wilderness Lodge")
+animal_kingdom_lodge = disney_world.resort_hotels.create!(name: "Disney's Animal Kingdom Lodge")
+coronado_springs = disney_world.resort_hotels.create!(name: "Disney's Coronado Springs Resort")
+caribbean_beach = disney_world.resort_hotels.create!(name: "Disney's Caribbean Beach Resort")
+art_of_animation = disney_world.resort_hotels.create!(name: "Disney's Art of Animation Resort")
+pop_century = disney_world.resort_hotels.create!(name: "Disney's Pop Century Resort")
+all_star_movies = disney_world.resort_hotels.create!(name: "Disney's All-Star Movies Resort")
+all_star_music = disney_world.resort_hotels.create!(name: "Disney's All-Star Music Resort")
+all_star_sports = disney_world.resort_hotels.create!(name: "Disney's All-Star Sports Resort")
+grand_californian = disneyland.resort_hotels.create!(name: "Disney's Grand Californian Hotel & Spa")
+paradise_pier = disneyland.resort_hotels.create!(name: "Disney's Paradise Pier Hotel")
+disneyland_hotel = disneyland.resort_hotels.create!(name: "Disneyland Hotel")
+tokyo_disneyland_hotel = tokyo_disney.resort_hotels.create!(name: "Tokyo Disneyland Hotel")
+tokyo_disneysea_hotel = tokyo_disney.resort_hotels.create!(name: "Tokyo DisneySea Hotel MiraCosta")
+tokyo_disney.resort_hotels.create!(name: "Tokyo Disney Celebration Hotel")
+hong_kong_disney.resort_hotels.create!(name: "Hong Kong Disneyland Hotel")
+hong_kong_disney.resort_hotels.create!(name: "Disney Explorers Lodge")
+shanghai_disney.resort_hotels.create!(name: "Shanghai Disneyland Hotel")
+shanghai_disney.resort_hotels.create!(name: "Toy Story Hotel")
+disneyland_paris.resort_hotels.create!(name: "Disneyland Hotel")
+disneyland_paris.resort_hotels.create!(name: "Disney's Newport Bay Club")
+disneyland_paris.resort_hotels.create!(name: "Disney's Sequoia Lodge")
+disneyland_paris.resort_hotels.create!(name: "Disney's Hotel New York - The Art of Marvel")
+disneyland_paris.resort_hotels.create!(name: "Disney's Hotel Cheyenne")
+disneyland_paris.resort_hotels.create!(name: "Disney's Hotel Santa Fe")
+disneyland_paris.resort_hotels.create!(name: "Disney's Davy Crockett Ranch")
+
+# Create modes of transportation
+disney_world.modes_of_transportation.create!(name: "Disney Skyliner")
+disney_world.modes_of_transportation.create!(name: "Monorail")
+disney_world.modes_of_transportation.create!(name: "Boat")
+disney_world.modes_of_transportation.create!(name: "Bus")
+disneyland.modes_of_transportation.create!(name: "Disneyland Monorail")
+disneyland.modes_of_transportation.create!(name: "Disneyland Resort Express")
+tokyo_disney.modes_of_transportation.create!(name: "Disney Resort Line")
+tokyo_disney.modes_of_transportation.create!(name: "Tokyo Disney Resort Bus")
+hong_kong_disney.modes_of_transportation.create!(name: "Disneyland Resort Line")
+hong_kong_disney.modes_of_transportation.create!(name: "Disneyland Resort Bus")
+shanghai_disney.modes_of_transportation.create!(name: "Disney Resort Line")
+shanghai_disney.modes_of_transportation.create!(name: "Shanghai Disney Resort Bus")
+disneyland_paris.modes_of_transportation.create!(name: "Disneyland Paris RER")
+disneyland_paris.modes_of_transportation.create!(name: "Disneyland Paris Bus")
+aulani.modes_of_transportation.create!(name: "Aulani Shuttle")
+disney_vero_beach.modes_of_transportation.create!(name: "Disney's Vero Beach Resort Shuttle")
+
+# Create restaurants
+magic_kingdom.restaurants.create!(name: "Cinderella's Royal Table")
+magic_kingdom.restaurants.create!(name: "Be Our Guest Restaurant")
+magic_kingdom.restaurants.create!(name: "The Crystal Palace")
+magic_kingdom.restaurants.create!(name: "Liberty Tree Tavern")
+magic_kingdom.restaurants.create!(name: "Pecos Bill Tall Tale Inn and Cafe")
+magic_kingdom.restaurants.create!(name: "Jungle Navigation Co. Ltd. Skipper Canteen")
+magic_kingdom.restaurants.create!(name: "Tony's Town Square Restaurant")
+magic_kingdom.restaurants.create!(name: "The Plaza Restaurant")
+magic_kingdom.restaurants.create!(name: "Columbia Harbour House")
+magic_kingdom.restaurants.create!(name: "Gaston's Tavern")
+magic_kingdom.restaurants.create!(name: "Sleepy Hollow")
+magic_kingdom.restaurants.create!(name: "Aloha Isle")
+magic_kingdom.restaurants.create!(name: "Pineapple Lanai")
+magic_kingdom.restaurants.create!(name: "Casey's Corner")
+magic_kingdom.restaurants.create!(name: "Cosmic Ray's Starlight Cafe")
+magic_kingdom.restaurants.create!(name: "Tomorrowland Terrace Restaurant")
+magic_kingdom.restaurants.create!(name: "Be Our Guest Restaurant")
+magic_kingdom.restaurants.create!(name: "Liberty Square Market")
+magic_kingdom.restaurants.create!(name: "Sleepy Hollow Refreshments")
+magic_kingdom.restaurants.create!(name: "The Lunching Pad")
+magic_kingdom.restaurants.create!(name: "Storybook Treats")
+magic_kingdom.restaurants.create!(name: "Friar's Nook")
+magic_kingdom.restaurants.create!(name: "The Diamond Horseshoe")
+magic_kingdom.restaurants.create!(name: "The Crystal Palace")
+magic_kingdom.restaurants.create!(name: "The Plaza Ice Cream Parlor")
+magic_kingdom.restaurants.create!(name: "Aloha Isle")
+magic_kingdom.restaurants.create!(name: "Gaston's Tavern")
+magic_kingdom.restaurants.create!(name: "Pineapple Lanai")
+magic_kingdom.restaurants.create!(name: "The Cheshire Cafe")
+magic_kingdom.restaurants.create!(name: "The Lunching Pad")
+
+epcot.restaurants.create!(name: "Le Cellier Steakhouse")
+epcot.restaurants.create!(name: "Akershus Royal Banquet Hall")
+epcot.restaurants.create!(name: "Coral Reef Restaurant")
+epcot.restaurants.create!(name: "Garden Grill Restaurant")
+epcot.restaurants.create!(name: "Via Napoli Ristorante e Pizzeria")
+epcot.restaurants.create!(name: "Chefs de France")
+epcot.restaurants.create!(name: "Monsieur Paul")
+epcot.restaurants.create!(name: "Rose & Crown Dining Room")
+epcot.restaurants.create!(name: "San Angel Inn Restaurante")
+epcot.restaurants.create!(name: "Teppan Edo")
+epcot.restaurants.create!(name: "Tokyo Dining")
+epcot.restaurants.create!(name: "Biergarten Restaurant")
+epcot.restaurants.create!(name: "Nine Dragons Restaurant")
+epcot.restaurants.create!(name: "Spice Road Table")
+epcot.restaurants.create!(name: "Regal Eagle Smokehouse: Craft Drafts & Barbecue")
+epcot.restaurants.create!(name: "La Cantina de San Angel")
+epcot.restaurants.create!(name: "Cantina de San Angel")
+epcot.restaurants.create!(name: "Fountain View")
+epcot.restaurants.create!(name: "Electric Umbrella")
+epcot.restaurants.create!(name: "Sunshine Seasons")
+epcot.restaurants.create!(name: "Yorkshire County Fish Shop")
+epcot.restaurants.create!(name: "Refreshment Port")
+epcot.restaurants.create!(name: "Taste Track")
+epcot.restaurants.create!(name: "Block & Hans")
+epcot.restaurants.create!(name: "Jardin de Fiestas")
+epcot.restaurants.create!(name: "Refreshment Outpost")
+epcot.restaurants.create!(name: "Kringla Bakeri Og Kafe")
+epcot.restaurants.create!(name: "Les Halles Boulangerie-Patisserie")
+epcot.restaurants.create!(name: "Boulangerie Patisserie les Halles")
+epcot.restaurants.create!(name: "Katsura Grill")
+epcot.restaurants.create!(name: "La Cava del Tequila")
+epcot.restaurants.create!(name: "La Cantina de San Angel")
+epcot.restaurants.create!(name: "Refreshment Cool Post")
+epcot.restaurants.create!(name: "Yorkshire County Fish Shop")
+epcot.restaurants.create!(name: "Refreshment Outpost")
+epcot.restaurants.create!(name: "Fife & Drum Tavern")
+epcot.restaurants.create!(name: "Liberty Inn")
+epcot.restaurants.create!(name: "Electric Umbrella")
+epcot.restaurants.create!(name: "Sunshine Seasons")
+epcot.restaurants.create!(name: "Coral Reef Restaurant")
+epcot.restaurants.create!(name: "Garden Grill Restaurant")
+epcot.restaurants.create!(name: "Akershus Royal Banquet Hall")
+
+
+disney_hollywood_studios.restaurants.create!(name: "Sci-Fi Dine-In Theater Restaurant")
+disney_hollywood_studios.restaurants.create!(name: "50's Prime Time Café")
+disney_hollywood_studios.restaurants.create!(name: "Hollywood Brown Derby")
+disney_hollywood_studios.restaurants.create!(name: "Mama Melrose's Ristorante Italiano")
+disney_hollywood_studios.restaurants.create!(name: "ABC Commissary")
+disney_hollywood_studios.restaurants.create!(name: "Backlot Express")
+disney_hollywood_studios.restaurants.create!(name: "Docking Bay 7 Food and Cargo")
+disney_hollywood_studios.restaurants.create!(name: "Oga's Cantina")
+disney_hollywood_studios.restaurants.create!(name: "Woody's Lunch Box")
+disney_hollywood_studios.restaurants.create!(name: "Baseline Tap House")
+disney_hollywood_studios.restaurants.create!(name: "PizzeRizzo")
+disney_hollywood_studios.restaurants.create!(name: "Rosie's All-American Café")
+disney_hollywood_studios.restaurants.create!(name: "The Hollywood Brown Derby Lounge")
+disney_hollywood_studios.restaurants.create!(name: "The Trolley Car Café")
+
+
+disney_animal_kingdom.restaurants.create!(name: "Tiffins Restaurant")
+disney_animal_kingdom.restaurants.create!(name: "Yak & Yeti Restaurant")
+disney_animal_kingdom.restaurants.create!(name: "Rainforest Cafe")
+disney_animal_kingdom.restaurants.create!(name: "Tusker House Restaurant")
+disney_animal_kingdom.restaurants.create!(name: "Satu'li Canteen")
+disney_animal_kingdom.restaurants.create!(name: "Flame Tree Barbecue")
+disney_animal_kingdom.restaurants.create!(name: "Pizzafari")
+disney_animal_kingdom.restaurants.create!(name: "Harambe Market")
+disney_animal_kingdom.restaurants.create!(name: "Restaurantosaurus")
+disney_animal_kingdom.restaurants.create!(name: "Dawa Bar")
+disney_animal_kingdom.restaurants.create!(name: "Nomad Lounge")
+disney_animal_kingdom.restaurants.create!(name: "Thirsty River Bar & Trek Snacks")
+disney_animal_kingdom.restaurants.create!(name: "Eight Spoon Cafe")
+disney_animal_kingdom.restaurants.create!(name: "Trilo-Bites")
+disney_animal_kingdom.restaurants.create!(name: "Kusafiri Coffee Shop & Bakery")
+disney_animal_kingdom.restaurants.create!(name: "Zuri's Sweets Shop")
+disney_animal_kingdom.restaurants.create!(name: "Creature Comforts")
+disney_animal_kingdom.restaurants.create!(name: "Pongu Pongu")
+
+
+
+disneyland_park.restaurants.create!(name: "Blue Bayou Restaurant")
+disneyland_park.restaurants.create!(name: "Cafe Orleans")
+disney_california_adventure.restaurants.create!(name: "Carthay Circle Restaurant")
+disney_california_adventure.restaurants.create!(name: "Wine Country Trattoria")
+tokyo_disneyland.restaurants.create!(name: "Queen of Hearts Banquet Hall")
+tokyo_disneyland.restaurants.create!(name: "Crystal Palace")
+tokyo_disneysea.restaurants.create!(name: "Magellan's")
+tokyo_disneysea.restaurants.create!(name: "S.S. Columbia Dining Room")
+hong_kong_disneyland.restaurants.create!(name: "Royal Banquet Hall")
+
+grand_floridian.restaurants.create!(name: "Victoria & Albert's")
+grand_floridian.restaurants.create!(name: "Cítricos")
+grand_floridian.restaurants.create!(name: "Narcoossee's")
+grand_floridian.restaurants.create!(name: "Gasparilla Island Grill")
+polynesian.restaurants.create!(name: "Ohana")
+polynesian.restaurants.create!(name: "Kona Cafe")
+contemporary.restaurants.create!(name: "California Grill")
+contemporary.restaurants.create!(name: "Chef Mickey's")
+wilderness_lodge.restaurants.create!(name: "Artist Point")
+wilderness_lodge.restaurants.create!(name: "Whispering Canyon Cafe")
+animal_kingdom_lodge.restaurants.create!(name: "Jiko - The Cooking Place")
+animal_kingdom_lodge.restaurants.create!(name: "Boma - Flavors of Africa")
+coronado_springs.restaurants.create!(name: "Three Bridges Bar & Grill at Villa del Lago")
+coronado_springs.restaurants.create!(name: "Rix Sports Bar & Grill")
+caribbean_beach.restaurants.create!(name: "Sebastian's Bistro")
+art_of_animation.restaurants.create!(name: "Landscape of Flavors")
+pop_century.restaurants.create!(name: "Everything Pop Shopping & Dining")
+all_star_movies.restaurants.create!(name: "World Premiere Food Court")
+all_star_music.restaurants.create!(name: "Intermission Food Court")
+all_star_sports.restaurants.create!(name: "End Zone Food Court")
+
+# create attractions
+# Magic Kingdom attractions
+magic_kingdom.attractions.create!(name: "Space Mountain")
+magic_kingdom.attractions.create!(name: "Pirates of the Caribbean")
+magic_kingdom.attractions.create!(name: "Haunted Mansion")
+magic_kingdom.attractions.create!(name: "It's a Small World")
+magic_kingdom.attractions.create!(name: "Big Thunder Mountain Railroad")
+magic_kingdom.attractions.create!(name: "Splash Mountain")
+magic_kingdom.attractions.create!(name: "Seven Dwarfs Mine Train")
+magic_kingdom.attractions.create!(name: "Buzz Lightyear's Space Ranger Spin")
+magic_kingdom.attractions.create!(name: "Peter Pan's Flight")
+magic_kingdom.attractions.create!(name: "Jungle Cruise")
+magic_kingdom.attractions.create!(name: "PeopleMover")
+magic_kingdom.attractions.create!(name: "Monsters, Inc. Laugh Floor")
+magic_kingdom.attractions.create!(name: "Astro Orbiter")
+magic_kingdom.attractions.create!(name: "Walt Disney's Carousel of Progress")
+magic_kingdom.attractions.create!(name: "Enchanted Tales with Belle")
+magic_kingdom.attractions.create!(name: "The Magic Carpets of Aladdin")
+magic_kingdom.attractions.create!(name: "Dumbo the Flying Elephant")
+magic_kingdom.attractions.create!(name: "Mad Tea Party")
+magic_kingdom.attractions.create!(name: "Tomorrowland Speedway")
+magic_kingdom.attractions.create!(name: "Under the Sea - Journey of The Little Mermaid")
+magic_kingdom.attractions.create!(name: "The Barnstormer")
+magic_kingdom.attractions.create!(name: "Astro Orbiter")
+magic_kingdom.attractions.create!(name: "Swiss Family Treehouse")
+magic_kingdom.attractions.create!(name: "The Hall of Presidents")
+magic_kingdom.attractions.create!(name: "Country Bear Jamboree")
+magic_kingdom.attractions.create!(name: "Liberty Square Riverboat")
+magic_kingdom.attractions.create!(name: "Tom Sawyer Island")
+magic_kingdom.attractions.create!(name: "Walt Disney's Enchanted Tiki Room")
+magic_kingdom.attractions.create!(name: "The Magic Kingdom Railroad")
+magic_kingdom.attractions.create!(name: "Astro Orbiter")
+
+# Epcot attractions
+epcot.attractions.create!(name: "Spaceship Earth")
+epcot.attractions.create!(name: "Test Track")
+epcot.attractions.create!(name: "Soarin' Around the World")
+epcot.attractions.create!(name: "Frozen Ever After")
+epcot.attractions.create!(name: "Mission: SPACE")
+epcot.attractions.create!(name: "Living with the Land")
+epcot.attractions.create!(name: "The Seas with Nemo & Friends")
+epcot.attractions.create!(name: "Journey into Imagination with Figment")
+epcot.attractions.create!(name: "Gran Fiesta Tour Starring The Three Caballeros")
+epcot.attractions.create!(name: "Remy's Ratatouille Adventure")
+epcot.attractions.create!(name: "Spaceship Earth")
+epcot.attractions.create!(name: "The American Adventure")
+epcot.attractions.create!(name: "Reflections of China")
+epcot.attractions.create!(name: "O Canada!")
+epcot.attractions.create!(name: "Impressions de France")
+epcot.attractions.create!(name: "Beauty and the Beast Sing-Along")
+epcot.attractions.create!(name: "The Land Pavilion")
+epcot.attractions.create!(name: "The Imagination Pavilion")
+epcot.attractions.create!(name: "The World Showcase Lagoon")
+epcot.attractions.create!(name: "The Living Seas")
+epcot.attractions.create!(name: "The Circle of Life")
+epcot.attractions.create!(name: "The Innoventions")
+epcot.attractions.create!(name: "The Universe of Energy")
+epcot.attractions.create!(name: "The Wonders of Life")
+
+# Disney's Hollywood Studios attractions
+disney_hollywood_studios.attractions.create!(name: "Star Wars: Rise of the Resistance")
+disney_hollywood_studios.attractions.create!(name: "Millennium Falcon: Smugglers Run")
+disney_hollywood_studios.attractions.create!(name: "Toy Story Land")
+disney_hollywood_studios.attractions.create!(name: "Slinky Dog Dash")
+disney_hollywood_studios.attractions.create!(name: "Alien Swirling Saucers")
+disney_hollywood_studios.attractions.create!(name: "Toy Story Midway Mania")
+disney_hollywood_studios.attractions.create!(name: "Rock 'n' Roller Coaster Starring Aerosmith")
+disney_hollywood_studios.attractions.create!(name: "The Twilight Zone Tower of Terror")
+disney_hollywood_studios.attractions.create!(name: "Star Tours - The Adventures Continue")
+disney_hollywood_studios.attractions.create!(name: "Muppet*Vision 3D")
+disney_hollywood_studios.attractions.create!(name: "Indiana Jones Epic Stunt Spectacular!")
+disney_hollywood_studios.attractions.create!(name: "Beauty and the Beast Live on Stage")
+disney_hollywood_studios.attractions.create!(name: "Fantasmic!")
+
+# Disney's Animal Kingdom attractions
+disney_animal_kingdom.attractions.create!(name: "Avatar Flight of Passage")
+disney_animal_kingdom.attractions.create!(name: "Na'vi River Journey")
+disney_animal_kingdom.attractions.create!(name: "Expedition Everest - Legend of the Forbidden Mountain")
+disney_animal_kingdom.attractions.create!(name: "Kilimanjaro Safaris")
+disney_animal_kingdom.attractions.create!(name: "Dinosaur")
+disney_animal_kingdom.attractions.create!(name: "It's Tough to Be a Bug!")
+disney_animal_kingdom.attractions.create!(name: "Triceratops Spin")
+disney_animal_kingdom.attractions.create!(name: "Primeval Whirl")
+disney_animal_kingdom.attractions.create!(name: "Finding Nemo - The Musical")
+disney_animal_kingdom.attractions.create!(name: "Festival of the Lion King")
+disney_animal_kingdom.attractions.create!(name: "UP! A Great Bird Adventure")
+disney_animal_kingdom.attractions.create!(name: "Gorilla Falls Exploration Trail")
+disney_animal_kingdom.attractions.create!(name: "Maharajah Jungle Trek")
+disney_animal_kingdom.attractions.create!(name: "Wildlife Express Train")
+disney_animal_kingdom.attractions.create!(name: "The Oasis Exhibits")

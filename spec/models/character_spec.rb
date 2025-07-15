@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 RSpec.describe Show, type: :model do
   describe "validations" do
     it "is valid with valid attributes in a park" do
