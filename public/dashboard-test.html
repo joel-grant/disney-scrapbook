@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard Test</title>
+    <script>
+        // Simple test function to verify dashboard functionality
+        function testDashboardFeatures() {
+            console.log('Testing Dashboard Features...');
+            
+            // Test 1: Check if mobile menu elements exist
+            const mobileOpenButton = document.querySelector('[data-dashboard-mobile-open]');
+            const mobileCloseButton = document.querySelector('[data-dashboard-mobile-close]');
+            const mobileMenu = document.querySelector('[data-dashboard-mobile-menu]');
+            const backdrop = document.querySelector('[data-dashboard-mobile-backdrop]');
+            
+            console.log('Mobile menu elements found:', {
+                openButton: !!mobileOpenButton,
+                closeButton: !!mobileCloseButton,
+                mobileMenu: !!mobileMenu,
+                backdrop: !!backdrop
+            });
+            
+            // Test 2: Check if dropdown elements exist
+            const dropdownButtons = document.querySelectorAll('[data-dropdown-button]');
+            const dropdownMenus = document.querySelectorAll('[data-dropdown-menu]');
+            
+            console.log('Dropdown elements found:', {
+                buttons: dropdownButtons.length,
+                menus: dropdownMenus.length
+            });
+            
+            // Test 3: Test mobile menu functionality (if elements exist)
+            if (mobileOpenButton && mobileMenu) {
+                console.log('Testing mobile menu open...');
+                mobileOpenButton.click();
+                
+                setTimeout(() => {
+                    const isVisible = !mobileMenu.classList.contains('hidden');
+                    console.log('Mobile menu visible after click:', isVisible);
+                    
+                    if (mobileCloseButton) {
+                        console.log('Testing mobile menu close...');
+                        mobileCloseButton.click();
+                        
+                        setTimeout(() => {
+                            const isHidden = mobileMenu.classList.contains('hidden');
+                            console.log('Mobile menu hidden after close:', isHidden);
+                        }, 400);
+                    }
+                }, 400);
+            }
+            
+            // Test 4: Test dropdown functionality
+            if (dropdownButtons.length > 0) {
+                console.log('Testing dropdown functionality...');
+                const firstButton = dropdownButtons[0];
+                const menuId = firstButton.getAttribute('data-dropdown-button');
+                const menu = document.querySelector(`[data-dropdown-menu="${menuId}"]`);
+                
+                if (menu) {
+                    console.log('Testing dropdown open...');
+                    firstButton.click();
+                    
+                    setTimeout(() => {
+                        const isVisible = !menu.classList.contains('hidden');
+                        console.log('Dropdown visible after click:', isVisible);
+                        
+                        // Test close by clicking outside
+                        console.log('Testing dropdown close by clicking outside...');
+                        document.body.click();
+                        
+                        setTimeout(() => {
+                            const isHidden = menu.classList.contains('hidden');
+                            console.log('Dropdown hidden after outside click:', isHidden);
+                        }, 100);
+                    }, 100);
+                }
+            }
+            
+            console.log('Dashboard functionality test complete!');
+        }
+        
+        // Run test when page loads
+        window.addEventListener('load', function() {
+            setTimeout(testDashboardFeatures, 1000);
+        });
+    </script>
+</head>
+<body>
+    <h1>Dashboard Test Page</h1>
+    <p>Check the browser console for test results.</p>
+    <button onclick="testDashboardFeatures()">Run Dashboard Tests</button>
+</body>
+</html>

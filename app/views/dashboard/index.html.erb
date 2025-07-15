@@ -1,6 +1,6 @@
 <div>
   <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
-  <div class="relative z-50 lg:hidden" role="dialog" aria-modal="true">
+  <div class="relative z-50 lg:hidden hidden" role="dialog" aria-modal="true" data-dashboard-mobile-menu>
     <!--
       Off-canvas menu backdrop, show/hide based on off-canvas menu state.
 
@@ -11,7 +11,7 @@
         From: "opacity-100"
         To: "opacity-0"
     -->
-    <div class="fixed inset-0 bg-gray-900/80" aria-hidden="true"></div>
+    <div class="fixed inset-0 bg-gray-900/80 transition-opacity ease-linear duration-300 opacity-0" aria-hidden="true" data-dashboard-mobile-backdrop></div>
 
     <div class="fixed inset-0 flex">
       <!--
@@ -24,7 +24,7 @@
           From: "translate-x-0"
           To: "-translate-x-full"
       -->
-      <div class="relative mr-16 flex w-full max-w-xs flex-1">
+      <div class="relative mr-16 flex w-full max-w-xs flex-1 transition ease-in-out duration-300 transform -translate-x-full" data-dashboard-mobile-panel>
         <!--
           Close button, show/hide based on off-canvas menu state.
 
@@ -35,8 +35,8 @@
             From: "opacity-100"
             To: "opacity-0"
         -->
-        <div class="absolute top-0 left-full flex w-16 justify-center pt-5">
-          <button type="button" class="-m-2.5 p-2.5">
+        <div class="absolute top-0 left-full flex w-16 justify-center pt-5 transition ease-in-out duration-300 opacity-0" data-dashboard-mobile-close-container>
+          <button type="button" class="-m-2.5 p-2.5" data-dashboard-mobile-close>
             <span class="sr-only">Close sidebar</span>
             <svg class="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -236,7 +236,7 @@
   </div>
 
   <div class="sticky top-0 z-40 flex items-center gap-x-6 bg-white px-4 py-4 shadow-xs sm:px-6 lg:hidden">
-    <button type="button" class="-m-2.5 p-2.5 text-gray-700 lg:hidden">
+    <button type="button" class="-m-2.5 p-2.5 text-gray-700 lg:hidden" data-dashboard-mobile-open>
       <span class="sr-only">Open sidebar</span>
       <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -270,7 +270,7 @@
             <div class="flex flex-none items-center gap-x-4">
               <a href="#" class="hidden rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 sm:block">View project<span class="sr-only">, GraphQL API</span></a>
               <div class="relative flex-none">
-                <button type="button" class="relative block text-gray-500 hover:text-gray-900" id="options-menu-0-button" aria-expanded="false" aria-haspopup="true">
+                <button type="button" class="relative block text-gray-500 hover:text-gray-900" id="options-menu-0-button" aria-expanded="false" aria-haspopup="true" data-dropdown-button="main-0">
                   <span class="absolute -inset-2.5"></span>
                   <span class="sr-only">Open options</span>
                   <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
@@ -288,7 +288,7 @@
                     From: "transform opacity-100 scale-100"
                     To: "transform opacity-0 scale-95"
                 -->
-                <div class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-hidden" role="menu" aria-orientation="vertical" aria-labelledby="options-menu-0-button" tabindex="-1">
+                <div class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-hidden hidden transition ease-out duration-100 transform opacity-0 scale-95" role="menu" aria-orientation="vertical" aria-labelledby="options-menu-0-button" tabindex="-1" data-dropdown-menu="main-0">
                   <!-- Active: "bg-gray-50 outline-hidden", Not Active: "" -->
                   <a href="#" class="block px-3 py-1 text-sm/6 text-gray-900" role="menuitem" tabindex="-1" id="options-menu-0-item-0">Edit<span class="sr-only">, GraphQL API</span></a>
                   <a href="#" class="block px-3 py-1 text-sm/6 text-gray-900" role="menuitem" tabindex="-1" id="options-menu-0-item-1">Move<span class="sr-only">, GraphQL API</span></a>
@@ -321,7 +321,7 @@
         <div class="flex flex-none items-center gap-x-4">
           <a href="#" class="hidden rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 sm:block">View project<span class="sr-only">, GraphQL API</span></a>
           <div class="relative flex-none">
-            <button type="button" class="relative block text-gray-500 hover:text-gray-900" id="options-menu-0-button" aria-expanded="false" aria-haspopup="true">
+            <button type="button" class="relative block text-gray-500 hover:text-gray-900" id="options-menu-1-button" aria-expanded="false" aria-haspopup="true" data-dropdown-button="aside-0">
               <span class="absolute -inset-2.5"></span>
               <span class="sr-only">Open options</span>
               <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
@@ -339,7 +339,7 @@
                 From: "transform opacity-100 scale-100"
                 To: "transform opacity-0 scale-95"
             -->
-            <div class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-hidden" role="menu" aria-orientation="vertical" aria-labelledby="options-menu-0-button" tabindex="-1">
+            <div class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-hidden hidden transition ease-out duration-100 transform opacity-0 scale-95" role="menu" aria-orientation="vertical" aria-labelledby="options-menu-1-button" tabindex="-1" data-dropdown-menu="aside-0">
               <!-- Active: "bg-gray-50 outline-hidden", Not Active: "" -->
               <a href="#" class="block px-3 py-1 text-sm/6 text-gray-900" role="menuitem" tabindex="-1" id="options-menu-0-item-0">Edit<span class="sr-only">, GraphQL API</span></a>
               <a href="#" class="block px-3 py-1 text-sm/6 text-gray-900" role="menuitem" tabindex="-1" id="options-menu-0-item-1">Move<span class="sr-only">, GraphQL API</span></a>
