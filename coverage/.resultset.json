@@ -204,7 +204,11 @@
           null,
           null,
           1,
+          7,
+          null,
+          null,
           1,
+          6,
           null,
           null,
           1,
@@ -273,6 +277,28 @@
           null
         ]
       },
+      "/Users/joelgrant/dev/projects/disney-scrapbook/spec/features/register/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/joelgrant/dev/projects/disney-scrapbook/config/routes.rb": {
         "lines": [
           1,
@@ -287,6 +313,11 @@
           null,
           null,
           null,
+          null,
+          1,
+          null,
+          1,
+          1,
           null,
           1,
           null
@@ -308,8 +339,68 @@
           1,
           null
         ]
+      },
+      "/Users/joelgrant/dev/projects/disney-scrapbook/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/joelgrant/dev/projects/disney-scrapbook/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/joelgrant/dev/projects/disney-scrapbook/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/joelgrant/dev/projects/disney-scrapbook/app/controllers/dashboard_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1752528449
+    "timestamp": 1752549228
   }
 }

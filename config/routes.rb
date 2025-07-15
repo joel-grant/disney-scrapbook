@@ -12,4 +12,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "homepage#index"
+
+  get "/register", to: "users#new", as: :new_user_registration
+  resources :users, only: [ :create ]
+
+  resources :dashboard, only: [ :index ]
 end
