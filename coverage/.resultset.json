@@ -204,11 +204,11 @@
           null,
           null,
           1,
-          11,
+          20,
           null,
           null,
           1,
-          10,
+          19,
           null,
           null,
           1,
@@ -299,6 +299,56 @@
           null
         ]
       },
+      "/Users/joelgrant/dev/projects/disney-scrapbook/spec/features/sessions/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          4,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/joelgrant/dev/projects/disney-scrapbook/config/routes.rb": {
         "lines": [
           1,
@@ -320,6 +370,10 @@
           1,
           null,
           1,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -377,7 +431,7 @@
           1,
           1,
           1,
-          2,
+          3,
           null
         ]
       },
@@ -392,15 +446,42 @@
         "lines": [
           1,
           1,
+          2,
+          null,
+          2,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joelgrant/dev/projects/disney-scrapbook/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           null,
           1,
+          1,
+          1,
+          1,
+          null,
           0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1752550720
+    "timestamp": 1752593920
   }
 }
