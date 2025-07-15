@@ -21,8 +21,8 @@ module DisneyScrapbook
       return "0.0.0" unless File.exist?(changelog_path)
 
       content = File.read(changelog_path)
-      # Match the first version pattern like [0.5.0]
-      match = content.match(/## \[(\d+\.\d+\.\d+)\]/)
+      # Match version patterns like [1.1.1] or [1.1.1-alpha.1] or [1.1.1-beta.2]
+      match = content.match(/## \[(\d+\.\d+\.\d+(?:-[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*)?)\]/)
       match ? match[1] : "0.0.0"
     rescue
       "0.0.0"
