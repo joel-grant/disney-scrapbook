@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_15_022122) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_15_200329) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "parks", force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.string "location", limit: 255, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location"], name: "index_parks_on_location"
+    t.index ["name"], name: "index_parks_on_name", unique: true
+    t.check_constraint "length(location::text) > 0", name: "location_not_empty"
+    t.check_constraint "length(name::text) > 0", name: "name_not_empty"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false

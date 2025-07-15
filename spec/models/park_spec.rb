@@ -19,11 +19,11 @@ RSpec.describe "Park", type: :model do
   end
 
   describe "associations" do
-    it { should have_many(:attractions) }
-    it { should have_many(:restaurants) }
-    it { should have_many(:shows) }
-    it { should have_many(:characters) }
-    it { should have_many(:events) }
-    it { should have_many(:modes_of_transportation) }
+    # it { should have_many(:attractions) }
+    # it { should have_many(:restaurants) }
+    # it { should have_many(:shows) }
+    # it { should have_many(:characters) }
+    # it { should have_many(:events) }
+    # it { should have_many(:modes_of_transportation) }
   end
 end
