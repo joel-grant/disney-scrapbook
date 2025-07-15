@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0-alpha.3](https://github.com/joel-grant/disney-scrapbook/compare/v0.7.0-alpha.2...v0.7.0-alpha.3) (2025-07-15)
+
+
+### Features
+
+* add user login flow ([5f5e03b](https://github.com/joel-grant/disney-scrapbook/commit/5f5e03b2d743e3ec089a4b24dd9686d96d02c474))
+
 ## [0.7.0-alpha.2](https://github.com/joel-grant/disney-scrapbook/compare/v0.7.0-alpha.1...v0.7.0-alpha.2) (2025-07-15)
 
 
