@@ -20,7 +20,7 @@ RSpec.describe "User Dashboard", type: :feature do
       expect(current_path).to eq(dashboard_index_path)
     end
     it "displays the user's name" do
-      expect(page).to have_content("Welcome, #{@user.first_name}")
+      expect(page).to have_content("Bibbidi Bobbidi Boo! Have a magical day #{@user.first_name}!")
     end
   end
 end

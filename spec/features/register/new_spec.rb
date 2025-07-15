@@ -13,6 +13,6 @@ RSpec.describe "User Registration", type: :feature do
 
     expect(current_path).to eq(dashboard_index_path) # Assuming you have a dashboard path after registration
     # expect(page).to have_content("Welcome! Be our Guest!")
-    expect(page).to have_content("TestFirstName's Dashboard")
+    expect(page).to have_content("Hiya TestFirstName! Welcome to your Disney Scrapbook!")
   end
 end
