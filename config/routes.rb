@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get "/register", to: "users#new", as: :new_user_registration
   resources :users, only: [ :create ]
 
-  resources :dashboard, only: [ :index ]
+  get "/dashboard", to: "dashboard#index", as: :dashboard_index
 
   get "/login", to: "sessions#new", as: :login
   post "/login", to: "sessions#create"

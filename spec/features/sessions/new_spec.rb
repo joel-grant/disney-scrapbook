@@ -41,6 +41,6 @@ RSpec.describe "User Sessions", type: :feature do
     click_button "Sign in"
 
     expect(current_path).to eq(dashboard_index_path)
-    # expect(page).to have_content("Welcome back, #{user.first_name}!")
+    expect(page).to have_content("Bibbidi Bobbidi Boo! Have a magical day #{user.first_name}!")
   end
 end
