@@ -1,0 +1,5 @@
+class AddResortToResortHotels < ActiveRecord::Migration[8.0]
+  def change
+    add_reference :resort_hotels, :resort, null: false, foreign_key: true
+  end
+end
