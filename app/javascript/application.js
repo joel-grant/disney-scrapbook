@@ -194,6 +194,12 @@ function setupDropdownMenus() {
   
   if (dropdownButtons.length === 0) return; // No dropdowns on this page
   
+  // Remove any existing event listeners first
+  document.querySelectorAll('[data-dropdown-button]').forEach(btn => {
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+  });
+  
   // Close all dropdowns
   function closeAllDropdowns() {
     const dropdownMenus = document.querySelectorAll('[data-dropdown-menu]');
@@ -208,7 +214,7 @@ function setupDropdownMenus() {
       
       setTimeout(() => {
         menu.classList.add('hidden');
-      }, 75);
+      }, 150);
     });
   }
   
@@ -229,12 +235,26 @@ function setupDropdownMenus() {
       
       setTimeout(() => {
         menu.classList.add('hidden');
-      }, 75);
+      }, 150);
     } else {
-      // Close all other dropdowns first
-      closeAllDropdowns();
+      // Close all other dropdowns first, but not this one
+      const currentMenu = menu;
+      const dropdownMenus = document.querySelectorAll('[data-dropdown-menu]');
+      dropdownMenus.forEach(otherMenu => {
+        if (otherMenu !== currentMenu) {
+          const otherButton = document.querySelector(`[data-dropdown-button="${otherMenu.getAttribute('data-dropdown-menu')}"]`);
+          if (otherButton) {
+            otherButton.setAttribute('aria-expanded', 'false');
+          }
+          otherMenu.classList.remove('opacity-100', 'scale-100');
+          otherMenu.classList.add('opacity-0', 'scale-95');
+          setTimeout(() => {
+            otherMenu.classList.add('hidden');
+          }, 150);
+        }
+      });
       
-      // Open this dropdown
+      // Open this dropdown immediately
       button.setAttribute('aria-expanded', 'true');
       menu.classList.remove('hidden');
       
@@ -250,21 +270,52 @@ function setupDropdownMenus() {
   }
   
   // Add click listeners to dropdown buttons
-  dropdownButtons.forEach(button => {
+  const refreshedButtons = document.querySelectorAll('[data-dropdown-button]');
+  refreshedButtons.forEach(button => {
     const menuId = button.getAttribute('data-dropdown-button');
+    console.log('Adding listener to button:', menuId);
     button.addEventListener('click', function(e) {
       e.stopPropagation();
+      console.log('Button clicked:', menuId);
       toggleDropdown(menuId);
     });
   });
   
+  // Remove existing global dropdown event listeners
+  document.removeEventListener('click', window.dropdownOutsideClickHandler);
+  document.removeEventListener('click', window.dropdownMenuItemClickHandler);
+  document.removeEventListener('keydown', window.dropdownEscapeHandler);
+  
   // Close dropdowns when clicking outside
-  document.addEventListener('click', function(e) {
+  window.dropdownOutsideClickHandler = function(e) {
     const isDropdownClick = e.target.closest('[data-dropdown-button]') || 
                            e.target.closest('[data-dropdown-menu]');
     
     if (!isDropdownClick) {
+      console.log('Outside click detected, closing dropdowns. Clicked element:', e.target);
+      closeAllDropdowns();
+    } else {
+      console.log('Click was inside dropdown area');
+    }
+  };
+  document.addEventListener('click', window.dropdownOutsideClickHandler);
+  
+  // Close dropdowns when clicking on menu items
+  window.dropdownMenuItemClickHandler = function(e) {
+    if (e.target.closest('[data-dropdown-menu] a')) {
+      console.log('Menu item clicked, closing dropdown');
+      // User clicked on a menu item, close the dropdown
       closeAllDropdowns();
     }
-  });
+  };
+  document.addEventListener('click', window.dropdownMenuItemClickHandler);
+  
+  // Close dropdowns with Escape key
+  window.dropdownEscapeHandler = function(e) {
+    if (e.key === 'Escape') {
+      console.log('Escape pressed, closing dropdowns');
+      closeAllDropdowns();
+    }
+  };
+  document.addEventListener('keydown', window.dropdownEscapeHandler);
 }
