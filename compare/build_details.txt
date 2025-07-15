@@ -1,2 +1,2 @@
 Base branch (main) score: 98.5 
-Feature branch (feature/issue-51) score: 98.5 
+Feature branch (release-please--branches--main) score: 98.5 
