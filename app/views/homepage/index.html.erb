@@ -21,10 +21,7 @@
         <a href="#" class="text-sm/6 font-semibold text-white">Marketplace</a>
         <a href="#" class="text-sm/6 font-semibold text-white">Company</a> %>
       </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-        <a href="/register" class="text-sm/6 font-semibold text-white bg-gray-800 px-4 py-2 rounded-md hover:bg-gray-700 transition-colors">Register</a>
-        <a href="/login" class="text-sm/6 font-semibold text-white bg-gray-800 px-4 py-2 rounded-md hover:bg-gray-700 transition-colors">Log in <span aria-hidden="true">&rarr;</span></a>
-      </div>
+      <%= render 'shared/auth_buttons_desktop' %>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
     <div class="lg:hidden hidden" role="dialog" aria-modal="true" data-mobile-menu>
@@ -51,10 +48,7 @@
               <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">Marketplace</a>
               <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800">Company</a> %>
             </div>
-            <div class="py-6 space-y-3">
-              <a href="/register" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-gray-800">Register</a>
-              <a href="/login" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-gray-800">Log in</a>
-            </div>
+            <%= render 'shared/auth_buttons_mobile' %>
           </div>
         </div>
       </div>
