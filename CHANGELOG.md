@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0-alpha.4](https://github.com/joel-grant/disney-scrapbook/compare/v0.7.0-alpha.3...v0.7.0-alpha.4) (2025-07-15)
+
+
+### Features
+
+* add user log out process ([438457b](https://github.com/joel-grant/disney-scrapbook/commit/438457b92af0f9bb5b331deb67117431397b2f57))
+
 ## [0.7.0-alpha.3](https://github.com/joel-grant/disney-scrapbook/compare/v0.7.0-alpha.2...v0.7.0-alpha.3) (2025-07-15)
 
 
