@@ -3,7 +3,10 @@
     
     <% if @user %>
       <div class="bg-white/10 rounded-lg p-6 max-w-md mx-auto">
-    <h1 class="text-4xl font-bold text-center mb-8"><%= @user.first_name %>'s Dashboard</h1>
+        <div class="flex justify-between items-center mb-6">
+          <h1 class="text-4xl font-bold text-center"><%= @user.first_name %>'s Dashboard</h1>
+          <%= button_to "Log out", logout_path, method: :delete, class: auth_button_classes(:danger) %>
+        </div>
         <h2 class="text-2xl font-semibold mb-4">Welcome, <%= @user.first_name %>!</h2>
         <div class="space-y-2">
           <p><strong>Name:</strong> <%= @user.first_name %> <%= @user.last_name %></p>
@@ -13,6 +16,9 @@
     <% else %>
       <div class="text-center">
         <p class="text-red-400">Please log in to view your dashboard.</p>
+        <div class="mt-4">
+          <a href="/login" class="<%= auth_button_classes(:primary) %>">Log in</a>
+        </div>
       </div>
     <% end %>
   </div>

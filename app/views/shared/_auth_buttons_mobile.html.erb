@@ -1,0 +1,14 @@
+<% if logged_in? %>
+  <!-- Logged in mobile state -->
+  <div class="py-6 space-y-3">
+    <div class="px-3 text-sm text-gray-300">Welcome, <%= current_user.first_name %>!</div>
+    <a href="<%= dashboard_index_path %>" class="<%= mobile_auth_button_classes(:secondary) %>">Dashboard</a>
+    <%= button_to "Log out", logout_path, method: :delete, class: mobile_auth_button_classes(:danger) %>
+  </div>
+<% else %>
+  <!-- Logged out mobile state -->
+  <div class="py-6 space-y-3">
+    <a href="/register" class="<%= mobile_auth_button_classes(:primary) %>">Register</a>
+    <a href="/login" class="<%= mobile_auth_button_classes(:primary) %>">Log in</a>
+  </div>
+<% end %>

@@ -29,6 +29,59 @@
   </head>
 
   <body class="h-full">
+    <!-- Flash messages with Disney magic -->
+    <% if flash.any? %>
+      <div class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-md px-4">
+        <% flash.each do |type, message| %>
+          <div id="flash-<%= type %>-<%= Time.current.to_i %>" 
+               class="flash-message <%= flash_notification_classes(type) %> <%= 'success-sparkles' if %w[notice success].include?(type.to_s) %> rounded-lg p-4 mb-3 shadow-lg backdrop-blur-sm border border-white/20"
+               data-auto-dismiss="5000">
+            
+            <% if %w[notice success].include?(type.to_s) %>
+              <!-- Visible border stars for success messages -->
+              <div class="absolute -top-2 -left-2 text-yellow-400 text-lg animate-pulse">⭐</div>
+              <div class="absolute -top-3 left-1/4 text-gray-300 text-sm animate-pulse" style="animation-delay: 0.5s;">✨</div>
+              <div class="absolute -top-2 left-3/4 text-gray-400 text-sm animate-pulse" style="animation-delay: 1.5s;">✨</div>
+              <div class="absolute -top-2 -right-2 text-yellow-400 text-lg animate-pulse" style="animation-delay: 0.3s;">⭐</div>
+              
+              <div class="absolute top-1/4 -right-3 text-gray-300 text-sm animate-pulse" style="animation-delay: 0.8s;">✨</div>
+              <div class="absolute top-3/4 -right-3 text-gray-400 text-sm animate-pulse" style="animation-delay: 0.2s;">✨</div>
+              
+              <div class="absolute -bottom-2 -right-2 text-yellow-400 text-lg animate-pulse" style="animation-delay: 0.7s;">⭐</div>
+              <div class="absolute -bottom-3 right-1/4 text-gray-300 text-sm animate-pulse" style="animation-delay: 1.2s;">✨</div>
+              <div class="absolute -bottom-2 right-1/2 text-yellow-300 text-base animate-pulse" style="animation-delay: 0.4s;">⭐</div>
+              <div class="absolute -bottom-2 -left-2 text-yellow-400 text-lg animate-pulse" style="animation-delay: 1.4s;">⭐</div>
+              
+              <div class="absolute bottom-1/4 -left-3 text-gray-300 text-sm animate-pulse" style="animation-delay: 0.6s;">✨</div>
+              <div class="absolute bottom-1/2 -left-2 text-yellow-300 text-base animate-pulse" style="animation-delay: 1.1s;">⭐</div>
+              <div class="absolute bottom-3/4 -left-3 text-gray-400 text-sm animate-pulse" style="animation-delay: 0.1s;">✨</div>
+            <% end %>
+            
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <%= flash_icon(type) %>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-white"><%= message %></p>
+              </div>
+              <div class="ml-auto pl-3">
+                <div class="flex">
+                  <button type="button" 
+                          class="rounded-md text-white/70 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-colors duration-200" 
+                          onclick="dismissFlashMessage(this.closest('.flash-message'))">
+                    <span class="sr-only">Dismiss</span>
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    
     <%= yield %>
     
     <!-- Footer with version information -->

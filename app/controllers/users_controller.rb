@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       # Create a session for the user
       session[:user_id] = @user.id
       Rails.logger.info "Session set, redirecting to dashboard"
-      redirect_to dashboard_index_path
+      redirect_to dashboard_index_path, notice: "Bibbidi Bobbidi Boo! Welcome to your Disney Scrapbook!"
     else
       Rails.logger.error "User save failed. Errors: #{@user.errors.full_messages}"
       render :new, status: :unprocessable_entity

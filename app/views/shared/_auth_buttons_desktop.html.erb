@@ -1,0 +1,14 @@
+<% if logged_in? %>
+  <!-- Logged in state -->
+  <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4 lg:items-center">
+    <span class="text-sm text-gray-300">Welcome, <%= current_user.first_name %>!</span>
+    <a href="<%= dashboard_index_path %>" class="<%= auth_button_classes(:secondary) %>">Dashboard</a>
+    <%= button_to "Log out", logout_path, method: :delete, class: auth_button_classes(:danger) %>
+  </div>
+<% else %>
+  <!-- Logged out state -->
+  <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+    <a href="/register" class="<%= auth_button_classes(:primary) %>">Register</a>
+    <a href="/login" class="<%= auth_button_classes(:primary) %>">Log in <span aria-hidden="true">&rarr;</span></a>
+  </div>
+<% end %>
