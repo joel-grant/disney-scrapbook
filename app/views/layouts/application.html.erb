@@ -35,9 +35,11 @@
     <footer class="bg-gray-900 text-gray-400 py-4">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="text-center space-y-3">
-          <div class="text-sm text-gray-300 italic font-medium">
-            For the one who showed me that magic is real when you believe in it together ✨
-          </div>
+          <% if current_page?(root_path) %>
+            <div class="text-sm text-gray-300 italic font-medium">
+              For the one who showed me that magic is real when you believe in it together ✨
+            </div>
+          <% end %>
           <div class="text-xs text-gray-500">
             v<%= DisneyScrapbook::VERSION %> of Disney Scrapbook was deployed on 
             <%= DisneyScrapbook::Version.deployed_at_eastern.strftime("%B %d, %Y at %I:%M %p %Z") %>
