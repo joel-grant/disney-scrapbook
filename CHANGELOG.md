@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0-alpha.1](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.3-alpha.1...v0.7.0-alpha.1) (2025-07-15)
+
+
+### Features
+
+* register a user ([e6850ec](https://github.com/joel-grant/disney-scrapbook/commit/e6850ec7eebb19302c7faf107a472a5a344d2c33))
+
 ## [0.6.3-alpha.1](https://github.com/joel-grant/disney-scrapbook/compare/v0.6.3-alpha...v0.6.3-alpha.1) (2025-07-14)
 
 
