@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0-alpha.5](https://github.com/joel-grant/disney-scrapbook/compare/v0.7.0-alpha.4...v0.7.0-alpha.5) (2025-07-15)
+
+
+### Features
+
+* set up basic dashboard ([76e84e8](https://github.com/joel-grant/disney-scrapbook/commit/76e84e85a5c5c937f3a7ce4df2f9d1fca2e45fe4))
+
 ## [0.7.0-alpha.4](https://github.com/joel-grant/disney-scrapbook/compare/v0.7.0-alpha.3...v0.7.0-alpha.4) (2025-07-15)
 
 
