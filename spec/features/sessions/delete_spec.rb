@@ -23,20 +23,20 @@ RSpec.describe "Sessions", type: :feature do
     end
 
     it "logs out the user" do
-      expect(page).to have_link("Log out")
-      click_link "Log out"
+      expect(page).to have_button("Log out")
+      click_button "Log out"
       expect(current_path).to eq(root_path)
       expect(page).to have_content("You have been logged out.")
     end
 
     it "doesn't allow access to the dashboard after logging out" do
-      click_link "Log out"
+      click_button "Log out"
       visit dashboard_index_path
       expect(current_path).to eq(login_path) # Should redirect to login page
     end
 
     it "does not show the Log out link after logging out" do
-      click_link "Log out"
+      click_button "Log out"
       expect(page).not_to have_link("Log out") # Ensure the log out link is no longer present
       expect(page).to have_link("Log in")
     end
