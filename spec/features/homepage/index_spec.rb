@@ -17,7 +17,26 @@ RSpec.describe "Homepage", type: :feature do
     expect(page).to have_link("Log in")
   end
 
-  it "has a link to get started" do
-    expect(page).to have_link("Get started")
+  it "has a link to register" do
+    expect(page).to have_link("Register")
+  end
+
+  it "has a link to register in the desktop navigation that leads to /register" do
+    within("header") do
+      within(".hidden.lg\\:flex.lg\\:flex-1.lg\\:justify-end") do
+        click_link("Register")
+      end
+    end
+    expect(page).to have_current_path("/register")
+  end
+
+  it "has a link to register in the mobile menu that leads to /register" do
+    # Open mobile menu first
+    find("[data-mobile-menu-button]").click
+
+    within("[data-mobile-menu]") do
+      click_link("Register")
+    end
+    expect(page).to have_current_path("/register")
   end
 end
